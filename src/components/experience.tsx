@@ -23,7 +23,7 @@ const Experience = () => {
     return (
         <div className=' w-full h-10  space-y-5 '>
             <div className="ttext uppercase flex justify-center">
-                Experience with
+                Experience with hamza
             </div>
             <div className="w-full flex   justify-center">
                 <div className=" flex items-center space-x-4">
