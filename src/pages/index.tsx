@@ -9,7 +9,7 @@ import Contact from "@/components/contact";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return (
+  return ( 
     <main
       className={`w-full`}
     >
