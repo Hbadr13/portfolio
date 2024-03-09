@@ -26,15 +26,15 @@ const Experience = () => {
                 Experience with
             </div>
             <div className="w-full flex   justify-center">
-                {/* <div className=" flex items-center space-x-4">
+                <div className=" flex items-center space-x-4">
                     <Image src='/js.svg' width={40} height={40} alt='js'></Image>
                     <Image src='/nextjs.svg' width={40} height={40} alt='js'></Image>
                     <Image src='/html.svg' width={40} height={40} alt='js'></Image>
                     <Image src='/css.svg' width={40} height={40} alt='js'></Image>
                     <Image src='/reactjs.svg' width={40} height={40} alt='js'></Image>
-                    {icons[0]}
-                    {icons[1]}
-                </div> */}
+                    {/* {icons[0]} */}
+                    {/* {icons[1]} */}
+                </div>
             </div>
         </div>
     )
