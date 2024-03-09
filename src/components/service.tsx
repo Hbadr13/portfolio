@@ -36,7 +36,7 @@ const Service = () => {
                 <h1 className="mt-20 text-[60px] flex flex-col text-balance font-bold justify-center items-center bg-gradient-to-r from-[#cda7ff] via-[#f2af7f] to-[#6961dd]   text-transparent bg-clip-text">
                     SERVICE
                 </h1>
-                <div className="w-1/3 grid  grid-cols-3 gap-4  mt-4  ">
+                {/* <div className="w-1/3 grid  grid-cols-3 gap-4  mt-4  ">
                     {
                         listOfservice.map((item, index) => (
                             <div key={index} className="w-[140px] h-10 flex justify-center  items-center rounded-[30px] ServiceGradiant ">
@@ -47,7 +47,7 @@ const Service = () => {
                             </div>
                         ))
                     }
-                </div>
+                </div> */}
             </div>
 
         </main>
