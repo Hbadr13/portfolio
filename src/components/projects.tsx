@@ -9,7 +9,7 @@ const ProjectCard = ({ setshowdetails, title, link }: { setshowdetails: (showdet
 
                 </div>
             </div>
-            <div className="w-full h-[20%] p-4 relative bg-[#2A2A2A] text-[#FFFFFF] font-bold tracking-wider">
+            <div className="w-full h-[22%] p-4 relative block bg-[#2A2A2A] text-[#FFFFFF] font-bold tracking-wider">
                 <div className="text-sm opacity-60">
                     CLICK HERE TO VISIT
                 </div>
