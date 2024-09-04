@@ -53,8 +53,8 @@ const index = () => {
             <div className="">
                 <ul className='space-y-20'>
                     {
-                        feeds.map((item) =>
-                            <li className="w-full flex  hover:bg-pf-surface-2 rounded-xl p-4 space-x-4">
+                        feeds.map((item, index) =>
+                            <li key={index} className="w-full flex  hover:bg-pf-surface-2 rounded-xl p-4 space-x-4">
                                 <Image className=' w-12 h-12 rounded-full' src={user.image} height={2000} width={2000} alt={user.name} />
                                 <div className="space-y-5">
                                     <div className="">

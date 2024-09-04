@@ -94,16 +94,16 @@ const Navbar = () => {
                         {/* Committed to delivering high-quality solutions and tackling complex technical challenges to achieve impactful results. */}
                     </div>
                     <ul className="flex items-center space-x-4">
-                        {profileDetails.map((item) =>
-                            <li className="flex items-center space-x-1">
+                        {profileDetails.map((item, index) =>
+                            <li key={index} className="flex items-center space-x-1">
                                 <SvgIcons name={item.image} />
                                 <div className="text-pf-light-grey-text">{item.name}</div>
                             </li>
                         )}
                     </ul>
                     <ul className="flex items-center space-x-4">
-                        {navs.map((nav) =>
-                            <li className="text-pf-light-grey-text font-semibold  hover:bg-pf-bg-grey rounded-md  duration-200 text-center  py-2 w-1/4 ">
+                        {navs.map((nav, index) =>
+                            <li key={index} className="text-pf-light-grey-text font-semibold  hover:bg-pf-bg-grey rounded-md  duration-200 text-center  py-2 w-1/4 ">
                                 <Link
                                     href={nav.slug}
                                     className={`${route.asPath == nav.slug ? 'border-pf-brand-fill border-b-2' : ''}  p-2`}
