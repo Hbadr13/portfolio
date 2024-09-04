@@ -11,7 +11,7 @@ const user = {
     image: '/images/hbadr.jpeg'
 }
 
-const index = () => {
+const Index = () => {
     const [content, setContent] = useState('')
 
     const feeds = [
@@ -98,4 +98,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index
