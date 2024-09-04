@@ -36,7 +36,23 @@ const Contact = () => {
                 <h1 className="mb-2 text-[60px] flex flex-col text-balance font-bold justify-center items-center bg-gradient-to-r from-[#cda7ff] via-[#f2af7f] to-[#6961dd]   text-transparent bg-clip-text">
                     CONTACT
                 </h1>
-                <div className="mt-10 w-1/2 Contact h-[400px]  rounded-xl z-30  ">
+                <div className="mt-10 w-1/2 Contact h-[400px]  rounded-xl z-30  flex  justify-around items-center ">
+                    <div className="flex flex-col items-center p-10 space-y-4">
+                        <Image src='/nextjs.svg' width={40} height={40} alt='js'></Image>
+                        <div className=" text-white  text-3xl">
+                            PHONE
+                        </div>
+                        <div className=" text-white text-xl">+212708029985</div>
+                    </div>
+                    <div className="flex flex-col items-center p-10 space-y-4">
+                        <Image src='/nextjs.svg' width={40} height={40} alt='js'></Image>
+                        <div className=" text-white  text-3xl">
+                            EMAIL
+                        </div>
+                        <div className=" text-white text-xl">hamzabadrbus@gmail.com</div>
+                    </div>
+                    {/* <div className="flex w-1/2 justify-around pl-4">
+                    </div> */}
 
                 </div>
             </div>

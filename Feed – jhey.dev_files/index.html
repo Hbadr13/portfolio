@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+<html lang="en-us" style="--rotate-x: -17.219917012448136; --rotate-y: -25.483425414364643; --dark: 0;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>3D CSS Plane</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#CC0088">
+    <link rel="manifest" href="https://jhey.dev/manifest.json">
+    <link rel="icon" href="https://jhey.dev/icons/favicon-32x32.png" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" href="https://jhey.dev/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="https://jhey.dev/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="https://jhey.dev/icons/favicon.svg">
+    <script
+        type="module">const r = (e, n, t, o) => { const s = n - e, c = o - t; return m => t + ((m - e) / s * c || 0) }; document.addEventListener("pointermove", ({ x: e, y: n }) => { const t = r(0, window.innerWidth, -50, 50)(e), o = r(0, window.innerHeight, 50, -50)(n); document.documentElement.style.setProperty("--rotate-x", o), document.documentElement.style.setProperty("--rotate-y", t) }); let d = !1; document.addEventListener("pointerdown", e => { d = !d, document.documentElement.style.setProperty("--dark", d ? 1 : 0) });</script>
+    <style>
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e5e7eb
+        }
+
+        :after,
+        :before {
+            --tw-content: ""
+        }
+
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+            font-feature-settings: normal
+        }
+
+        body {
+            margin: 0;
+            line-height: inherit
+        }
+
+        hr {
+            height: 0;
+            color: inherit;
+            border-top-width: 1px
+        }
+
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit
+        }
+
+        b,
+        strong {
+            font-weight: bolder
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+            font-size: 1em
+        }
+
+        small {
+            font-size: 80%
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            font-weight: inherit;
+            line-height: inherit;
+            color: inherit;
+            margin: 0;
+            padding: 0
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        [type=button],
+        [type=reset],
+        [type=submit],
+        button {
+            -webkit-appearance: button;
+            background-color: transparent;
+            background-image: none
+        }
+
+        :-moz-focusring {
+            outline: auto
+        }
+
+        :-moz-ui-invalid {
+            box-shadow: none
+        }
+
+        progress {
+            vertical-align: baseline
+        }
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto
+        }
+
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        summary {
+            display: list-item
+        }
+
+        blockquote,
+        dd,
+        dl,
+        figure,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        pre {
+            margin: 0
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0
+        }
+
+        legend {
+            padding: 0
+        }
+
+        menu,
+        ol,
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        textarea {
+            resize: vertical
+        }
+
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+
+        [role=button],
+        button {
+            cursor: pointer
+        }
+
+        :disabled {
+            cursor: default
+        }
+
+        audio,
+        canvas,
+        embed,
+        iframe,
+        img,
+        object,
+        svg,
+        video {
+            display: block;
+            vertical-align: middle
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto
+        }
+
+        [hidden] {
+            display: none
+        }
+
+        *,
+        :after,
+        :before {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / .5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000
+        }
+
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / .5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000
+        }
+
+        .container {
+            width: 100%
+        }
+
+        @media (min-width:640px) {
+            .container {
+                max-width: 640px
+            }
+        }
+
+        @media (min-width:768px) {
+            .container {
+                max-width: 768px
+            }
+        }
+
+        @media (min-width:1024px) {
+            .container {
+                max-width: 1024px
+            }
+        }
+
+        @media (min-width:1280px) {
+            .container {
+                max-width: 1280px
+            }
+        }
+
+        @media (min-width:1536px) {
+            .container {
+                max-width: 1536px
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0
+        }
+
+        .visible {
+            visibility: visible
+        }
+
+        .static {
+            position: static
+        }
+
+        .absolute {
+            position: absolute
+        }
+
+        .relative {
+            position: relative
+        }
+
+        .sticky {
+            position: sticky
+        }
+
+        .inset-0 {
+            inset: 0
+        }
+
+        .left-0 {
+            left: 0
+        }
+
+        .right-1 {
+            right: .25rem
+        }
+
+        .top-0 {
+            top: 0
+        }
+
+        .top-1 {
+            top: .25rem
+        }
+
+        .z-10 {
+            z-index: 10
+        }
+
+        .col-span-full {
+            grid-column: 1/-1
+        }
+
+        .m-0 {
+            margin: 0
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .my-12 {
+            margin-top: 3rem;
+            margin-bottom: 3rem
+        }
+
+        .my-16 {
+            margin-top: 4rem;
+            margin-bottom: 4rem
+        }
+
+        .my-6 {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem
+        }
+
+        .mb-0 {
+            margin-bottom: 0
+        }
+
+        .mb-1 {
+            margin-bottom: .25rem
+        }
+
+        .mb-12 {
+            margin-bottom: 3rem
+        }
+
+        .mb-2 {
+            margin-bottom: .5rem
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+
+        .mb-6 {
+            margin-bottom: 1.5rem
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem
+        }
+
+        .ml-2 {
+            margin-left: .5rem
+        }
+
+        .ml-6 {
+            margin-left: 1.5rem
+        }
+
+        .mt-2 {
+            margin-top: .5rem
+        }
+
+        .mt-20 {
+            margin-top: 5rem
+        }
+
+        .mt-4 {
+            margin-top: 1rem
+        }
+
+        .mt-8 {
+            margin-top: 2rem
+        }
+
+        .block {
+            display: block
+        }
+
+        .inline-block {
+            display: inline-block
+        }
+
+        .\!inline {
+            display: inline !important
+        }
+
+        .inline {
+            display: inline
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .inline-flex {
+            display: inline-flex
+        }
+
+        .grid {
+            display: grid
+        }
+
+        .hidden {
+            display: none
+        }
+
+        .aspect-\[3\/1\] {
+            aspect-ratio: 3/1
+        }
+
+        .aspect-\[3\/2\] {
+            aspect-ratio: 3/2
+        }
+
+        .aspect-\[4\/3\] {
+            aspect-ratio: 4/3
+        }
+
+        .aspect-square {
+            aspect-ratio: 1/1
+        }
+
+        .aspect-video {
+            aspect-ratio: 16/9
+        }
+
+        .h-10 {
+            height: 2.5rem
+        }
+
+        .h-11 {
+            height: 2.75rem
+        }
+
+        .h-36 {
+            height: 9rem
+        }
+
+        .h-4 {
+            height: 1rem
+        }
+
+        .h-5 {
+            height: 1.25rem
+        }
+
+        .h-6 {
+            height: 1.5rem
+        }
+
+        .h-full {
+            height: 100%
+        }
+
+        .min-h-half-avatar {
+            min-height: calc(var(--step-9) * .5)
+        }
+
+        .min-h-screen {
+            min-height: 100vh
+        }
+
+        .w-1\/2 {
+            width: 50%
+        }
+
+        .w-1\/4 {
+            width: 25%
+        }
+
+        .w-10 {
+            width: 2.5rem
+        }
+
+        .w-11 {
+            width: 2.75rem
+        }
+
+        .w-4 {
+            width: 1rem
+        }
+
+        .w-5 {
+            width: 1.25rem
+        }
+
+        .w-6 {
+            width: 1.5rem
+        }
+
+        .w-9 {
+            width: 2.25rem
+        }
+
+        .w-\[66ch\] {
+            width: 66ch
+        }
+
+        .w-avatar {
+            width: var(--step-9)
+        }
+
+        .w-full {
+            width: 100%
+        }
+
+        .max-w-\[100vw\] {
+            max-width: 100vw
+        }
+
+        .max-w-full {
+            max-width: 100%
+        }
+
+        .flex-grow,
+        .grow {
+            flex-grow: 1
+        }
+
+        .origin-center {
+            transform-origin: center
+        }
+
+        .-translate-x-1\/4 {
+            --tw-translate-x: -25%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .-translate-y-1\/2 {
+            --tw-translate-y: -50%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .-translate-y-1\/4 {
+            --tw-translate-y: -25%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .translate-y-\[var\(--icon-translate\)\] {
+            --tw-translate-y: var(--icon-translate);
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .scale-\[var\(--icon-scale\)\] {
+            --tw-scale-x: var(--icon-scale);
+            --tw-scale-y: var(--icon-scale);
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .transform {
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .cursor-pointer {
+            cursor: pointer
+        }
+
+        .resize {
+            resize: both
+        }
+
+        .scroll-mt-16 {
+            scroll-margin-top: 4rem
+        }
+
+        .list-decimal {
+            list-style-type: decimal
+        }
+
+        .list-disc {
+            list-style-type: disc
+        }
+
+        .auto-cols-\[1fr\] {
+            grid-auto-columns: 1fr
+        }
+
+        .grid-flow-col {
+            grid-auto-flow: column
+        }
+
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr))
+        }
+
+        .grid-cols-\[auto_1fr\] {
+            grid-template-columns: auto 1fr
+        }
+
+        .flex-col {
+            flex-direction: column
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap
+        }
+
+        .place-items-center {
+            place-items: center
+        }
+
+        .items-end {
+            align-items: flex-end
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .justify-end {
+            justify-content: flex-end
+        }
+
+        .justify-center {
+            justify-content: center
+        }
+
+        .justify-between {
+            justify-content: space-between
+        }
+
+        .gap-1 {
+            gap: .25rem
+        }
+
+        .gap-2 {
+            gap: .5rem
+        }
+
+        .gap-4 {
+            gap: 1rem
+        }
+
+        .gap-8 {
+            gap: 2rem
+        }
+
+        .gap-x-0 {
+            -moz-column-gap: 0;
+            column-gap: 0
+        }
+
+        .gap-x-1 {
+            -moz-column-gap: .25rem;
+            column-gap: .25rem
+        }
+
+        .gap-x-2 {
+            -moz-column-gap: .5rem;
+            column-gap: .5rem
+        }
+
+        .gap-x-4 {
+            -moz-column-gap: 1rem;
+            column-gap: 1rem
+        }
+
+        .gap-y-1 {
+            row-gap: .25rem
+        }
+
+        .gap-y-2 {
+            row-gap: .5rem
+        }
+
+        .gap-y-6 {
+            row-gap: 1.5rem
+        }
+
+        .overflow-auto {
+            overflow: auto
+        }
+
+        .whitespace-nowrap {
+            white-space: nowrap
+        }
+
+        .rounded-full {
+            border-radius: 9999px
+        }
+
+        .rounded-lg {
+            border-radius: .5rem
+        }
+
+        .rounded-md {
+            border-radius: .375rem
+        }
+
+        .rounded-l-full {
+            border-top-left-radius: 9999px;
+            border-bottom-left-radius: 9999px
+        }
+
+        .rounded-r-full {
+            border-top-right-radius: 9999px;
+            border-bottom-right-radius: 9999px
+        }
+
+        .border {
+            border-width: 1px
+        }
+
+        .border-2 {
+            border-width: 2px
+        }
+
+        .border-4 {
+            border-width: 4px
+        }
+
+        .border-y-4 {
+            border-top-width: 4px;
+            border-bottom-width: 4px
+        }
+
+        .border-l-4 {
+            border-left-width: 4px
+        }
+
+        .border-brand-stroke {
+            border-color: var(--brand-stroke)
+        }
+
+        .border-current {
+            border-color: currentColor
+        }
+
+        .border-surface-1 {
+            border-color: var(--surface-1)
+        }
+
+        .border-surface-3 {
+            border-color: var(--surface-3)
+        }
+
+        .border-text-1 {
+            border-color: var(--text-1)
+        }
+
+        .border-transparent {
+            border-color: transparent
+        }
+
+        .border-b-brand-stroke {
+            border-bottom-color: var(--brand-stroke)
+        }
+
+        .bg-\[var\(--gray-8\)\] {
+            background-color: var(--gray-8)
+        }
+
+        .bg-brand-fill {
+            background-color: var(--brand-fill)
+        }
+
+        .bg-surface-2 {
+            background-color: var(--surface-2)
+        }
+
+        .bg-surface-3 {
+            background-color: var(--surface-3)
+        }
+
+        .bg-surface-4 {
+            background-color: var(--surface-4)
+        }
+
+        .bg-surface-alpha {
+            background-color: var(--surface-alpha)
+        }
+
+        .object-cover {
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .p-2 {
+            padding: .5rem
+        }
+
+        .p-3 {
+            padding: .75rem
+        }
+
+        .p-4 {
+            padding: 1rem
+        }
+
+        .p-8 {
+            padding: 2rem
+        }
+
+        .px-3 {
+            padding-left: .75rem;
+            padding-right: .75rem
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+
+        .py-1 {
+            padding-top: .25rem;
+            padding-bottom: .25rem
+        }
+
+        .py-2 {
+            padding-top: .5rem;
+            padding-bottom: .5rem
+        }
+
+        .py-8 {
+            padding-top: 2rem;
+            padding-bottom: 2rem
+        }
+
+        .pl-1 {
+            padding-left: .25rem
+        }
+
+        .pl-3 {
+            padding-left: .75rem
+        }
+
+        .pl-4 {
+            padding-left: 1rem
+        }
+
+        .pl-8 {
+            padding-left: 2rem
+        }
+
+        .pt-0 {
+            padding-top: 0
+        }
+
+        .pt-4 {
+            padding-top: 1rem
+        }
+
+        .pt-8 {
+            padding-top: 2rem
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .font-mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace
+        }
+
+        .text-fluid--1 {
+            font-size: var(--step--1)
+        }
+
+        .text-fluid--2 {
+            font-size: var(--step--2)
+        }
+
+        .text-fluid-0 {
+            font-size: var(--step-0)
+        }
+
+        .text-fluid-1 {
+            font-size: var(--step-1)
+        }
+
+        .text-fluid-2 {
+            font-size: var(--step-2)
+        }
+
+        .text-fluid-3 {
+            font-size: var(--step-3)
+        }
+
+        .font-bold {
+            font-weight: 700
+        }
+
+        .uppercase {
+            text-transform: uppercase
+        }
+
+        .italic {
+            font-style: italic
+        }
+
+        .leading-\[1\.5\] {
+            line-height: 1.5
+        }
+
+        .leading-tight {
+            line-height: 1.25
+        }
+
+        .text-brand-stroke {
+            color: var(--brand-stroke)
+        }
+
+        .text-text-1 {
+            color: var(--text-1)
+        }
+
+        .text-text-2 {
+            color: var(--text-2)
+        }
+
+        .text-text-3 {
+            color: var(--text-3)
+        }
+
+        .text-text-4 {
+            color: var(--text-4)
+        }
+
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity))
+        }
+
+        .decoration-brand-stroke {
+            text-decoration-color: var(--brand-stroke)
+        }
+
+        .opacity-0 {
+            opacity: 0
+        }
+
+        .opacity-20 {
+            opacity: .2
+        }
+
+        .shadow-lg {
+            --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+            --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+        }
+
+        .outline-transparent {
+            outline-color: transparent
+        }
+
+        .ring {
+            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+        }
+
+        .filter {
+            filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+        }
+
+        .transition {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-duration: .15s
+        }
+
+        .ease-in-out {
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+        }
+
+        .first-letter\:float-left:first-letter {
+            float: left
+        }
+
+        .first-letter\:mr-3:first-letter {
+            margin-right: .75rem
+        }
+
+        .first-letter\:text-7xl:first-letter {
+            font-size: 4.5rem;
+            line-height: 1
+        }
+
+        .first-letter\:font-bold:first-letter {
+            font-weight: 700
+        }
+
+        .first-line\:uppercase:first-line {
+            text-transform: uppercase
+        }
+
+        .first-line\:tracking-widest:first-line {
+            letter-spacing: .1em
+        }
+
+        .hover\:border-brand-stroke:hover {
+            border-color: var(--brand-stroke)
+        }
+
+        .hover\:border-text-1:hover {
+            border-color: var(--text-1)
+        }
+
+        .hover\:bg-surface-2:hover {
+            background-color: var(--surface-2)
+        }
+
+        .hover\:bg-surface-4:hover {
+            background-color: var(--surface-4)
+        }
+
+        .hover\:text-brand-stroke:hover {
+            color: var(--brand-stroke)
+        }
+
+        .hover\:underline:hover {
+            text-decoration-line: underline
+        }
+
+        .hover\:no-underline:hover {
+            text-decoration-line: none
+        }
+
+        .focus\:border-text-1:focus {
+            border-color: var(--text-1)
+        }
+
+        .focus-visible\:border-text-1:focus-visible {
+            border-color: var(--text-1)
+        }
+
+        .focus-visible\:bg-surface-2:focus-visible {
+            background-color: var(--surface-2)
+        }
+
+        .focus-visible\:outline-0:focus-visible {
+            outline-width: 0
+        }
+
+        .group:hover .group-hover\:opacity-100 {
+            opacity: 1
+        }
+
+        @media (min-width:1024px) {
+            .lg\:rounded-lg {
+                border-radius: .5rem
+            }
+        }
+    </style>
+    <style>
+        .cuboid {
+            width: 100%;
+            height: 100%;
+            position: relative
+        }
+
+        .cuboid__side:nth-of-type(1) {
+            height: calc(var(--thickness) * 1vmin);
+            width: 100%;
+            position: absolute;
+            top: 0;
+            transform: translateY(-50%) rotateX(90deg)
+        }
+
+        .cuboid__side:nth-of-type(2) {
+            height: 100%;
+            width: calc(var(--thickness) * 1vmin);
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%) rotateY(90deg)
+        }
+
+        .cuboid__side:nth-of-type(3) {
+            width: 100%;
+            height: calc(var(--thickness) * 1vmin);
+            position: absolute;
+            bottom: 0;
+            transform: translateY(50%) rotateX(90deg)
+        }
+
+        .cuboid__side:nth-of-type(4) {
+            height: 100%;
+            width: calc(var(--thickness) * 1vmin);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%) rotateY(90deg)
+        }
+
+        .cuboid__side:nth-of-type(5) {
+            height: 100%;
+            width: 100%;
+            transform: translateZ(calc(var(--thickness) * .5vmin));
+            position: absolute;
+            top: 0;
+            left: 0
+        }
+
+        .cuboid__side:nth-of-type(6) {
+            height: 100%;
+            width: 100%;
+            transform: translateZ(calc(var(--thickness) * -.5vmin)) rotateY(180deg);
+            position: absolute;
+            top: 0;
+            left: 0
+        }
+
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+            transform-style: preserve-3d;
+            transition: background var(--speed, 0s)
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            background: var(--bg);
+            overflow: hidden;
+            touch-action: none
+        }
+
+        :root {
+            --dark: 0;
+            --base-size: 20;
+            --plane-height: calc(var(--base-size) * 1vmin);
+            --plane-width: calc(var(--plane-height) * 1.6);
+            --white-one: hsl(0, 0%, calc((90 - (var(--dark) * 30)) * 1%));
+            --white-two: hsl(0, 0%, calc((85 - (var(--dark) * 30)) * 1%));
+            --white-three: hsl(0, 0%, calc((80 - (var(--dark) * 30)) * 1%));
+            --white-four: hsl(0, 0%, calc((75 - (var(--dark) * 30)) * 1%));
+            --white-five: hsl(0, 0%, calc((70 - (var(--dark) * 30)) * 1%));
+            --accent-hue: 10;
+            --accent-one: hsl(var(--accent-hue), 80%, calc((60 - (var(--dark) * 20)) * 1%));
+            --accent-two: hsl(var(--accent-hue), 80%, calc((55 - (var(--dark) * 20)) * 1%));
+            --accent-three: hsl(var(--accent-hue), 80%, calc((50 - (var(--dark) * 20)) * 1%));
+            --accent-four: hsl(var(--accent-hue), 80%, calc((45 - (var(--dark) * 20)) * 1%));
+            --accent-five: hsl(var(--accent-hue), 80%, calc((40 - (var(--dark) * 20)) * 1%));
+            --screen: hsla(210, 80%, calc((70 - (var(--dark) * 20)) * 1%), .25);
+            --metal-one: hsl(0, 0%, calc((60 - (var(--dark) * 20)) * 1%));
+            --metal-two: hsl(0, 0%, calc((50 - (var(--dark) * 20)) * 1%));
+            --metal-three: hsl(0, 0%, calc((40 - (var(--dark) * 20)) * 1%));
+            --wheel-one: #1a1a1a;
+            --wheel-two: #0d0d0d;
+            --wheel-three: #000;
+            --wheel-hub: hsl(0, 0%, calc((98 - (var(--dark) * 20)) * 1%));
+            --bg: hsl(210, 80%, calc((90 - (var(--dark) * 76)) * 1%));
+            --night: #082949;
+            --cloud-one: hsl(0, 0%, calc((98 - (var(--dark) * 35)) * 1%));
+            --cloud-two: hsl(0, 0%, calc((94 - (var(--dark) * 35)) * 1%));
+            --cloud-three: hsl(0, 0%, calc((90 - (var(--dark) * 35)) * 1%));
+            --cloud-four: hsl(0, 0%, calc((86 - (var(--dark) * 35)) * 1%));
+            --cloud-five: hsl(0, 0%, calc((82 - (var(--dark) * 35)) * 1%));
+            --cloud-six: hsl(0, 0%, calc((78 - (var(--dark) * 35)) * 1%))
+        }
+
+        .scene {
+            transform: translate(-50%, -50%);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 100vmin) rotateX(-24deg) rotateY(44deg) rotateX(calc(var(--rotate-x, 0) * 1deg)) rotateY(calc(var(--rotate-y, 0) * 1deg))
+        }
+
+        .plane {
+            height: var(--plane-height);
+            width: var(--plane-width);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .plane__floater {
+            position: absolute;
+            width: var(--plane-width);
+            height: var(--plane-width);
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%
+        }
+
+        .plane__looper {
+            position: absolute;
+            width: var(--plane-width);
+            height: var(--plane-width);
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            transform-origin: 50% 0
+        }
+
+        .plane * {
+            position: absolute
+        }
+
+        .plane__body {
+            height: 40%;
+            width: 36%;
+            bottom: 20%;
+            left: 10%
+        }
+
+        .plane__wheels {
+            bottom: 0;
+            width: calc(var(--plane-height) * .2);
+            left: 32%;
+            transform: translate(-50%);
+            height: 20%
+        }
+
+        .plane__axle {
+            height: 50%;
+            width: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .plane__wheel {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0
+        }
+
+        .plane__wings {
+            height: 70%;
+            width: 40%;
+            bottom: 19%;
+            left: 12%
+        }
+
+        .plane__tail {
+            height: 40%;
+            width: 54%;
+            bottom: 20%;
+            left: 46%
+        }
+
+        .plane__nose {
+            height: 30%;
+            width: 10%;
+            bottom: 25%
+        }
+
+        .plane__stabilizer--horizontal {
+            height: 9%;
+            width: 16%;
+            right: 1%;
+            bottom: 50%
+        }
+
+        .plane__screen {
+            bottom: 60%;
+            left: 30%;
+            width: 6%;
+            height: 14%
+        }
+
+        .plane__propellor {
+            height: calc(var(--base-size) * .75vmin);
+            width: calc(var(--base-size) * .75vmin);
+            left: -1%;
+            bottom: 40%;
+            transform: translate(-50%, 50%) rotateY(-90deg)
+        }
+
+        .plane__propellor:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 2px);
+            height: 16%;
+            width: 16%;
+            border-radius: 50%;
+            background: var(--white-one)
+        }
+
+        .plane__stabilizer--vertical {
+            height: 20%;
+            width: 20%;
+            right: 0;
+            bottom: 60%
+        }
+
+        .plane__beacon {
+            right: 1%;
+            bottom: 80%;
+            height: 2%;
+            width: 2%
+        }
+
+        .plane__wheel--left {
+            transform: translateZ(calc(var(--base-size) * .3vmin))
+        }
+
+        .plane__wheel--right {
+            transform: translateZ(calc(var(--base-size) * -.3vmin))
+        }
+
+        .propellor {
+            height: 100%;
+            width: 100%
+        }
+
+        .propellor:after,
+        .propellor:before {
+            content: "";
+            height: 100%;
+            width: 10%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: linear-gradient(transparent 0 5%, var(--accent-two) 5% 15%, transparent 15% 85%, var(--accent-two) 85% 95%, transparent 95%), #000;
+            transform: translate(-50%, -50%) rotate(calc(var(--r, 45) * 1deg))
+        }
+
+        .propellor:after {
+            --r: -45
+        }
+
+        .wings__ghost {
+            height: 80%;
+            width: 80%;
+            left: 50%;
+            bottom: 10%;
+            transform: translate(-50%)
+        }
+
+        .wings__top {
+            top: 0;
+            height: 10%;
+            width: 100%;
+            left: 0
+        }
+
+        .wings__bottom {
+            bottom: 0;
+            height: 10%;
+            width: 100%;
+            left: 0
+        }
+
+        .wings__strobe {
+            bottom: 10%;
+            height: 4%;
+            width: 4%;
+            left: 50%
+        }
+
+        .wings__strobe--left {
+            transform: translate3d(-50%, 0, calc(var(--base-size) * 1vmin))
+        }
+
+        .wings__strobe--right {
+            transform: translate3d(-50%, 0, calc(var(--base-size) * -1vmin))
+        }
+
+        .cloud {
+            height: 10vmin;
+            width: 15vmin;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .cloud__body,
+        .cloud__shift {
+            height: 100%;
+            width: 100%
+        }
+
+        .cloud__body>div {
+            position: absolute
+        }
+
+        .cloud__body>div:nth-of-type(1) {
+            bottom: 0;
+            left: 25%;
+            width: 60%;
+            height: 90%;
+            --thickness: calc(var(--base-size) * .2)
+        }
+
+        .cloud__body>div:nth-of-type(2) {
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 60%;
+            --thickness: calc(var(--base-size) * .3)
+        }
+
+        .cloud__body>div:nth-of-type(3) {
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 40%;
+            --thickness: calc(var(--base-size) * .4)
+        }
+
+        .cloud--one {
+            --speed: 2;
+            --delay: 3;
+            transform: translate(-50%, -50%) translate3d(-40vmin, 20vmin, 26vmin)
+        }
+
+        .cloud--two {
+            --speed: 4;
+            --delay: 1;
+            transform: translate(-50%, -50%) translate3d(30vmin, -15vmin, -34vmin)
+        }
+
+        .cloud--three {
+            --speed: 6;
+            --delay: 2;
+            transform: translate(-50%, -50%) translate3d(50vmin, 35vmin, -14vmin)
+        }
+
+        .cuboid--body {
+            --thickness: calc(var(--base-size) * .4)
+        }
+
+        .cuboid--body div {
+            background: var(--white-two)
+        }
+
+        .cuboid--body div:nth-of-type(1) {
+            background: var(--white-one)
+        }
+
+        .cuboid--body div:nth-of-type(2) {
+            background: var(--white-two)
+        }
+
+        .cuboid--body div:nth-of-type(3) {
+            background: var(--white-three)
+        }
+
+        .cuboid--body div:nth-of-type(4) {
+            background: var(--white-four)
+        }
+
+        .cuboid--body div:nth-of-type(5) svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: calc(var(--base-size) * .25vmin);
+            width: calc(var(--base-size) * .25vmin);
+            filter: saturate(.65);
+            transform: translate3d(-50%, -50%, 1px)
+        }
+
+        .cuboid--screen {
+            --thickness: calc(var(--base-size) * .26)
+        }
+
+        .cuboid--screen div {
+            background: var(--screen)
+        }
+
+        .cuboid--tail {
+            --thickness: calc(var(--base-size) * .3)
+        }
+
+        .cuboid--tail div {
+            background: var(--white-two)
+        }
+
+        .cuboid--tail div:nth-of-type(1) {
+            background: var(--white-one)
+        }
+
+        .cuboid--tail div:nth-of-type(1):after {
+            content: "";
+            position: absolute;
+            height: 74%;
+            width: 50%;
+            background: var(--metal-three);
+            top: 50%;
+            right: 50%;
+            transform: translate3d(-50%, -50%, 1px)
+        }
+
+        .cuboid--tail div:nth-of-type(2) {
+            background: linear-gradient(var(--white-two) 0 30%, transparent 30%)
+        }
+
+        .cuboid--tail div:nth-of-type(3) {
+            background: linear-gradient(90deg, var(--white-two) 0 20%, transparent 20%)
+        }
+
+        .cuboid--tail div:nth-of-type(3):after {
+            content: "";
+            position: absolute;
+            background: var(--white-four);
+            top: 0;
+            left: 20%;
+            height: 100%;
+            width: 87%;
+            transform-origin: 0 50%;
+            transform: rotateY(-22deg)
+        }
+
+        .cuboid--tail div:nth-of-type(5) {
+            background: 0 0;
+            overflow: hidden
+        }
+
+        .cuboid--tail div:nth-of-type(5):after {
+            content: "";
+            position: absolute;
+            bottom: 70%;
+            height: 100%;
+            width: 100%;
+            background: var(--white-two);
+            transform-origin: 100% 100%;
+            transform: rotate(-22deg) scale(2) translate(10%)
+        }
+
+        .cuboid--tail div:nth-of-type(6) {
+            background: 0 0;
+            overflow: hidden
+        }
+
+        .cuboid--tail div:nth-of-type(6):after {
+            content: "";
+            position: absolute;
+            bottom: 70%;
+            height: 100%;
+            width: 100%;
+            background: var(--white-two);
+            transform-origin: 0 100%;
+            transform: rotate(22deg) scale(2) translate(-10%)
+        }
+
+        .cuboid--nose {
+            --thickness: calc(var(--base-size) * .3)
+        }
+
+        .cuboid--nose div {
+            background: var(--metal-three)
+        }
+
+        .cuboid--nose div:nth-of-type(1) {
+            background: var(--metal-one)
+        }
+
+        .cuboid--nose div:nth-of-type(2) {
+            background: var(--metal-two)
+        }
+
+        .cuboid--nose div:nth-of-type(3) {
+            background: var(--metal-one)
+        }
+
+        .cuboid--wings-bottom,
+        .cuboid--wings-ghost,
+        .cuboid--wings-top {
+            --thickness: calc(var(--base-size) * 2.2)
+        }
+
+        .cuboid--wings-bottom div,
+        .cuboid--wings-ghost div,
+        .cuboid--wings-top div {
+            background: var(--accent-one)
+        }
+
+        .cuboid--wings-bottom div:nth-of-type(1),
+        .cuboid--wings-ghost div:nth-of-type(1),
+        .cuboid--wings-top div:nth-of-type(1) {
+            background: var(--accent-two)
+        }
+
+        .cuboid--wings-bottom div:nth-of-type(2),
+        .cuboid--wings-bottom div:nth-of-type(5),
+        .cuboid--wings-ghost div:nth-of-type(2),
+        .cuboid--wings-ghost div:nth-of-type(5),
+        .cuboid--wings-top div:nth-of-type(2),
+        .cuboid--wings-top div:nth-of-type(5) {
+            background: var(--accent-three)
+        }
+
+        .cuboid--wings-bottom div:nth-of-type(4),
+        .cuboid--wings-ghost div:nth-of-type(4),
+        .cuboid--wings-top div:nth-of-type(4) {
+            background: var(--accent-four)
+        }
+
+        .cuboid--wings-bottom div:nth-of-type(3),
+        .cuboid--wings-ghost div:nth-of-type(3),
+        .cuboid--wings-top div:nth-of-type(3) {
+            background: var(--accent-five)
+        }
+
+        .cuboid--wings-ghost div:nth-of-type(1),
+        .cuboid--wings-ghost div:nth-of-type(3),
+        .cuboid--wings-ghost div:nth-of-type(5),
+        .cuboid--wings-ghost div:nth-of-type(6) {
+            background: 0 0
+        }
+
+        .cuboid--wings-ghost div:nth-of-type(2),
+        .cuboid--wings-ghost div:nth-of-type(4) {
+            background: linear-gradient(90deg, transparent 0 5%, var(--metal-one) 5% 7%, transparent 7% 33%, var(--metal-one) 33% 35%, transparent 35% 65%, var(--metal-one) 65% 67%, transparent 67% 93%, var(--metal-one) 93% 95%, transparent 95%)
+        }
+
+        .cuboid--axle {
+            --thickness: calc(var(--base-size) * .5)
+        }
+
+        .cuboid--axle div {
+            background: var(--metal-two)
+        }
+
+        .cuboid--axle div:nth-of-type(3) {
+            background: var(--metal-three)
+        }
+
+        .cuboid--axle div:nth-of-type(1),
+        .cuboid--axle div:nth-of-type(2) {
+            background: var(--metal-one)
+        }
+
+        .cuboid--axle div:nth-of-type(6) {
+            background: var(--metal-one)
+        }
+
+        .cuboid--horizontal-stabilizer {
+            --thickness: calc(var(--base-size) * .65)
+        }
+
+        .cuboid--horizontal-stabilizer div {
+            background: var(--accent-one)
+        }
+
+        .cuboid--horizontal-stabilizer div:nth-of-type(1) {
+            background: var(--accent-two)
+        }
+
+        .cuboid--horizontal-stabilizer div:nth-of-type(2),
+        .cuboid--horizontal-stabilizer div:nth-of-type(5) {
+            background: var(--accent-three)
+        }
+
+        .cuboid--horizontal-stabilizer div:nth-of-type(3),
+        .cuboid--horizontal-stabilizer div:nth-of-type(4) {
+            background: var(--accent-four)
+        }
+
+        .cuboid--vertical-stabilizer {
+            --thickness: calc(var(--base-size) * .2)
+        }
+
+        .cuboid--vertical-stabilizer div {
+            background: var(--accent-one)
+        }
+
+        .cuboid--vertical-stabilizer div:nth-of-type(1) {
+            background: linear-gradient(270deg, var(--accent-two) 0 30%, transparent 30%)
+        }
+
+        .cuboid--vertical-stabilizer div:nth-of-type(4) {
+            background: 0 0
+        }
+
+        .cuboid--vertical-stabilizer div:nth-of-type(4):after {
+            content: "";
+            background: var(--accent-four);
+            height: 150%;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            transform-origin: 50% 100%;
+            transform: rotateX(-48deg)
+        }
+
+        .cuboid--vertical-stabilizer div:nth-of-type(5) {
+            background: 0 0;
+            overflow: hidden
+        }
+
+        .cuboid--vertical-stabilizer div:nth-of-type(5):after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            transform-origin: 0 0;
+            transform: rotate(-42deg);
+            background: var(--accent-three);
+            height: 150%;
+            width: 160%
+        }
+
+        .cuboid--vertical-stabilizer div:nth-of-type(6) {
+            background: 0 0;
+            overflow: hidden
+        }
+
+        .cuboid--vertical-stabilizer div:nth-of-type(6):after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 0;
+            transform-origin: 100% 0;
+            transform: rotate(42deg);
+            background: var(--accent-three);
+            height: 150%;
+            width: 160%
+        }
+
+        .cuboid--wheel-left,
+        .cuboid--wheel-right {
+            --thickness: calc(var(--base-size) * .1)
+        }
+
+        .cuboid--wheel-left div,
+        .cuboid--wheel-right div {
+            background: var(--wheel-one)
+        }
+
+        .cuboid--wheel-left div:nth-of-type(1),
+        .cuboid--wheel-left div:nth-of-type(2),
+        .cuboid--wheel-left div:nth-of-type(4),
+        .cuboid--wheel-right div:nth-of-type(1),
+        .cuboid--wheel-right div:nth-of-type(2),
+        .cuboid--wheel-right div:nth-of-type(4) {
+            background: var(--wheel-two)
+        }
+
+        .cuboid--wheel-left div:nth-of-type(3),
+        .cuboid--wheel-right div:nth-of-type(3) {
+            background: var(--wheel-three)
+        }
+
+        .cuboid--wheel-left div:nth-of-type(5):after,
+        .cuboid--wheel-left div:nth-of-type(6):after,
+        .cuboid--wheel-right div:nth-of-type(5):after,
+        .cuboid--wheel-right div:nth-of-type(6):after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 40%;
+            width: 40%;
+            background: var(--wheel-hub)
+        }
+
+        .cuboid--cloud div:nth-of-type(1) {
+            background: var(--cloud-one)
+        }
+
+        .cuboid--cloud div:nth-of-type(2) {
+            background: var(--cloud-two)
+        }
+
+        .cuboid--cloud div:nth-of-type(3) {
+            background: var(--cloud-three)
+        }
+
+        .cuboid--cloud div:nth-of-type(4) {
+            background: var(--cloud-four)
+        }
+
+        .cuboid--cloud div:nth-of-type(5) {
+            background: var(--cloud-five)
+        }
+
+        .cuboid--cloud div:nth-of-type(6) {
+            background: var(--cloud-six)
+        }
+
+        .cuboid--beacon {
+            --thickness: calc(var(--base-size) * .02)
+        }
+
+        .cuboid--beacon div {
+            background: hsla(0, 90%, 50%, var(--alpha))
+        }
+
+        .cuboid--strobe {
+            --thickness: calc(var(--base-size) * .02)
+        }
+
+        .cuboid--strobe div {
+            background: hsla(0, 90%, 98%, var(--alpha))
+        }
+
+        @media (prefers-reduced-motion:no-preference) {
+            .plane {
+                animation: roll 10s infinite ease-out alternate
+            }
+
+            .plane__floater {
+                animation: float 2s infinite ease-in-out
+            }
+
+            .plane__looper {
+                animation: loop 10s infinite ease-in-out
+            }
+
+            .cuboid--beacon {
+                animation: flash calc(var(--dark) * 1s) infinite
+            }
+
+            .cuboid--strobe {
+                animation: flash calc(var(--dark) * .5s) infinite
+            }
+
+            .propellor {
+                animation: spin .35s infinite linear
+            }
+
+            .cloud__shift {
+                animation: pan calc(var(--speed, 5) * 1s) calc(var(--delay, 5) * -1s) infinite ease-in-out both
+            }
+
+            .cloud__body {
+                animation: scale calc(var(--speed, 5) * 1s) calc(var(--delay, 5) * -1s) infinite linear
+            }
+        }
+
+        @keyframes flash {
+            50% {
+                --alpha: 1
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translate(-50%, -40%)
+            }
+        }
+
+        @keyframes loop {
+
+            0%,
+            40% {
+                transform: translate(-50%, -50%)
+            }
+
+            50%,
+            to {
+                transform: translate(-50%, -50%) rotate(360deg)
+            }
+        }
+
+        @keyframes roll {
+
+            0%,
+            85% {
+                transform: translate(-50%, -50%)
+            }
+
+            90%,
+            to {
+                transform: translate(-50%, -50%) rotateX(-360deg)
+            }
+        }
+
+        @keyframes nightshift {
+
+            0%,
+            50% {
+                background: var(--bg)
+            }
+
+            75%,
+            to {
+                background: var(--night)
+            }
+        }
+
+        @keyframes scale {
+
+            0%,
+            5%,
+            95%,
+            to {
+                transform: scale(0)
+            }
+
+            10%,
+            90% {
+                transform: scale(1)
+            }
+        }
+
+        @keyframes pan {
+            0% {
+                transform: translate(-1000%)
+            }
+
+            to {
+                transform: translate(1000%)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scene">
+        <div class="cloud cloud--one">
+            <div class="cloud__shift">
+                <div class="cloud__body">
+                    <div>
+                        <div class="cuboid cuboid--cloud">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cuboid cuboid--cloud">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cuboid cuboid--cloud">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cloud cloud--two">
+            <div class="cloud__shift">
+                <div class="cloud__body">
+                    <div>
+                        <div class="cuboid cuboid--cloud">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cuboid cuboid--cloud">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cuboid cuboid--cloud">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cloud cloud--three">
+            <div class="cloud__shift">
+                <div class="cloud__body">
+                    <div>
+                        <div class="cuboid cuboid--cloud">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cuboid cuboid--cloud">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cuboid cuboid--cloud">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="plane__floater">
+            <div class="plane__looper">
+                <div class="plane">
+                    <div class="plane__wheels">
+                        <div class="plane__axle">
+                            <div class="cuboid cuboid--axle">
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                            </div>
+                        </div>
+                        <div class="plane__wheel plane__wheel--left">
+                            <div class="cuboid cuboid--wheel-left">
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                            </div>
+                        </div>
+                        <div class="plane__wheel plane__wheel--right">
+                            <div class="cuboid cuboid--wheel-right">
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plane__body">
+                        <div class="cuboid cuboid--body">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <g transform="matrix(1.34105 0 0 1.34105 -51 -1050)">
+                                        <path style="fill:#803300"
+                                            d="M243 894c0 61-42 106-95 106s-91-45-91-106 38-86 91-86 95 25 95 86z">
+                                        </path>
+                                        <path style="fill:#000"
+                                            d="m176 765-20 1-12 3 2 13c2 0 4 0 5 2 3 4 1 8 2 15 2 24 10 29 22 30 7 1 20 2 29-1 8-3 15-8 20-15 6-8 6-16 10-22 2-5 6-4 7 0 3 7 4 14 10 22 5 7 12 12 20 15 9 3 22 2 29 1 12-1 20-6 22-30 1-7-1-11 2-15 1-2 3-2 5-2l2-13-12-3c-13-2-20-1-30-1h-11l-21 4c-6 1-13 5-20 5-6 0-13-4-19-6l-21-3h-21z"
+                                            transform="translate(-129 -43) scale(1.17333)"></path>
+                                        <path
+                                            d="M182 770c-8 0-21 0-24 10-3 13-3 28 5 39 6 9 20 7 30 7 16-1 30-13 34-28 2-7 4-10 1-17-7-8-17-10-26-11h-20z"
+                                            style="fill:#333" transform="translate(-129 -43) scale(1.17333)"></path>
+                                        <path d="M157 773a3 1 0 0 1-3 1 3 1 0 0 1-3-1 3 1 0 0 1 3-2 3 1 0 0 1 3 2"
+                                            style="fill:#b3b3b3" transform="translate(-129 -43) scale(1.17333)"></path>
+                                        <path style="fill:#333"
+                                            d="M293 770c8 0 21 0 24 10 3 13 2 28-5 39-6 9-20 7-30 7-16-1-30-13-34-28-2-7-4-10-1-17 7-8 17-10 26-11h20z"
+                                            transform="translate(-129 -43) scale(1.17333)"></path>
+                                        <path style="fill:#b3b3b3"
+                                            d="M317 773a3 1 0 0 0 4 1 3 1 0 0 0 3-1 3 1 0 0 0-3-2 3 1 0 0 0-4 2"
+                                            transform="translate(-129 -43) scale(1.17333)"></path>
+                                        <path style="fill:#fff"
+                                            d="M52 5 36 62l14-1L66 7a75 75 0 0 0-14-2ZM42 5h-6L21 56l5 4L42 5Z"
+                                            transform="translate(40 855) scale(1.17333)"></path>
+                                        <path style="fill:#e9c6af"
+                                            d="M212 958c0 20-28 39-63 39s-61-19-61-39 26-33 61-33 63 13 63 33z"></path>
+                                        <path style="fill:#000"
+                                            d="M179 932c0 7-19 24-30 24s-32-17-32-24c0-8 21-13 32-13s30 5 30 13z">
+                                        </path>
+                                        <ellipse style="fill:#803300" cx="68.3" cy="827.7" rx="23.8" ry="23.1">
+                                        </ellipse>
+                                        <path style="fill:#e9c6af"
+                                            d="M85 826a17 16 0 0 0-17-14 17 16 0 0 0-16 16 17 16 0 0 0 16 16 17 16 0 0 0 1 0l3-4a66 66 0 0 1 11-12l2-2z">
+                                        </path>
+                                        <ellipse ry="23.1" rx="23.8" cy="827.7" cx="-231.2" style="fill:#803300"
+                                            transform="scale(-1 1)"></ellipse>
+                                        <path
+                                            d="M215 826a17 16 0 0 1 16-14 17 16 0 0 1 17 16 17 16 0 0 1-17 16 17 16 0 0 1-1 0l-2-4a66 66 0 0 0-11-12l-2-2z"
+                                            style="fill:#e9c6af"></path>
+                                        <path style="fill:red"
+                                            d="M323 676c-13 0-26 1-37 3v12a199 199 0 0 1 80 0v-11c-13-3-28-4-43-4z"
+                                            transform="translate(-175 140)"></path>
+                                        <path transform="translate(-175 892)"
+                                            d="M341-76a16 8 0 0 1 4 6 16 8 0 0 1-5 5l26 4v-11l-25-4z"
+                                            style="fill:#e50000"></path>
+                                        <path style="fill:#1a1a1a"
+                                            d="M148 789c-43 0-75 18-83 63 12-11 28-18 45-22 0 0-3-14 10-16s14-4 28-4c15 0 16 1 30 4 15 4 12 17 12 17 18 5 33 12 45 23-7-46-42-65-87-65z">
+                                        </path>
+                                    </g>
+                                </svg></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div class="plane__nose">
+                        <div class="cuboid cuboid--nose">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div class="plane__propellor">
+                        <div class="propellor"></div>
+                    </div>
+                    <div class="plane__screen">
+                        <div class="cuboid cuboid--screen">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div class="plane__wings wings">
+                        <div class="wings__top">
+                            <div class="cuboid cuboid--wings-top">
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                            </div>
+                        </div>
+                        <div class="wings__ghost">
+                            <div class="cuboid cuboid--wings-ghost">
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                            </div>
+                        </div>
+                        <div class="wings__bottom">
+                            <div class="cuboid cuboid--wings-bottom">
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                            </div>
+                        </div>
+                        <div class="wings__strobe wings__strobe--left">
+                            <div class="cuboid cuboid--strobe">
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                            </div>
+                        </div>
+                        <div class="wings__strobe wings__strobe--right">
+                            <div class="cuboid cuboid--strobe">
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plane__tail">
+                        <div class="cuboid cuboid--tail">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div class="plane__stabilizer plane__stabilizer--horizontal">
+                        <div class="cuboid cuboid--horizontal-stabilizer">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div class="plane__stabilizer plane__stabilizer--vertical">
+                        <div class="cuboid cuboid--vertical-stabilizer">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                    <div class="plane__beacon">
+                        <div class="cuboid cuboid--beacon">
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                            <div class="cuboid__side"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
