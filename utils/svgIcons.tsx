@@ -24,6 +24,10 @@ const SvgIcons = ({ name, width, color, height }: { name: string, color?: string
             icon: <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 5 8.75"><path id="Shape" d="M3.491,4.375.183,7.683a.625.625,0,0,0,.884.884l3.75-3.75a.625.625,0,0,0,0-.884L1.067.183a.625.625,0,0,0-.884.884Z" fill="#bfc3d4"></path>        </svg>
         },
         {
+            name: 'arrawV3',
+            icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M3.75 12.5H20.25" stroke="#5E5E63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M13.5 5.75L20.25 12.5L13.5 19.25" stroke="#5E5E63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />    </svg>
+        },
+        {
             name: 'OKy',
             icon: <svg aria-hidden="true" data-selected="true" role="presentation" viewBox="0 0 17 18"><polyline fill="none" points="1 9 7 14 15 4" stroke="currentColor" stroke-dasharray="22" stroke-dashoffset="44" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" ></polyline></svg>
 

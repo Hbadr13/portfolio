@@ -9,7 +9,7 @@ const Navbar = () => {
         {
             id: 0,
             name: 'Feed',
-            slug: '/feed',
+            slug: '/',
         },
         {
             id: 1,
@@ -25,6 +25,11 @@ const Navbar = () => {
             id: 3,
             name: 'Education',
             slug: '/education',
+        },
+        {
+            id: 3,
+            name: 'About',
+            slug: '/about',
         },
 
     ]
@@ -55,7 +60,7 @@ const Navbar = () => {
             name: 'Joined Jan 2023',
             image: 'work',
             type: '',
-            slug: '/feed',
+            slug: '/',
         },
 
     ]
