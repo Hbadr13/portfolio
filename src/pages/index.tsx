@@ -46,8 +46,7 @@ const Index = () => {
   }
   return (
     <div className='mt-20'>
-      <div className=""></div>
-      <div className=""></div>
+      <div className="">{``}</div>
       {/* {
                 content && <div className="fixed  inset-0 z-50 ">
                     <div className="text-9xl  relative ">🤖</div>
