@@ -80,7 +80,7 @@ const index = () => {
                                         </div>
                                     </Link> :
                                         <div className="cursor-not-allowed  p-5 font-semibold text-lg text-pf-dim-grey bg-white opacity-0 duration-200 group-hover:opacity-100  group-hover:translate-y-3 ">
-                                            Can't share the latest yet 🤭
+                                            {`Can't share the latest yet 🤭`}
                                         </div>
                                 }
                             </div>

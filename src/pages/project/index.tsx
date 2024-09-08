@@ -93,7 +93,7 @@ const index = () => {
                                 </div>
                                 <div className="">{item.description}</div>
                                 <div className="w-full flex flex-wrap justify-end gap-2 text-sm">
-                                    {item.skils.map((skil) => <div className='px-2 py-0.5 bg-blue-500 text-white rounded-lg '>{skil}</div>)}
+                                    {item.skils.map((skil, index) => <div key={index} className='px-2 py-0.5 bg-blue-500 text-white rounded-lg '>{skil}</div>)}
                                 </div>
                             </div>
                         </li>
