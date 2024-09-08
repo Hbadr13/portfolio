@@ -46,6 +46,7 @@ const Index = () => {
   }
   return (
     <div className='mt-20'>
+      <div className=""></div>
       {/* {
                 content && <div className="fixed  inset-0 z-50 ">
                     <div className="text-9xl  relative ">🤖</div>
@@ -61,7 +62,7 @@ const Index = () => {
                   <div className="">
                     <div className="flex items-start space-x-3">
                       <div className="flex space-x-2 items-center">
-                        <div className="font-bold">{user.shortName} ✨</div>
+                        <div className="font-bold">{user.shortName}  ✨</div>
                         <div className="w-1.5 h-1.5 rounded-full bg-pf-dim-grey" />
                         <div className="text-xs">{item.time}</div>
                       </div>
