@@ -25,11 +25,11 @@ const SvgIcons = ({ name, width, color, height }: { name: string, color?: string
         },
         {
             name: 'arrawV3',
-            icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M3.75 12.5H20.25" stroke="#5E5E63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M13.5 5.75L20.25 12.5L13.5 19.25" stroke="#5E5E63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />    </svg>
+            icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M3.75 12.5H20.25" stroke="#5E5E63" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /><path d="M13.5 5.75L20.25 12.5L13.5 19.25" stroke="#5E5E63" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />    </svg>
         },
         {
             name: 'OKy',
-            icon: <svg aria-hidden="true" data-selected="true" role="presentation" viewBox="0 0 17 18"><polyline fill="none" points="1 9 7 14 15 4" stroke="currentColor" stroke-dasharray="22" stroke-dashoffset="44" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" ></polyline></svg>
+            icon: <svg aria-hidden="true" data-selected="true" role="presentation" viewBox="0 0 17 18"><polyline fill="none" points="1 9 7 14 15 4" stroke="currentColor" stroke-dasharray="22" stroke-dashoffset="44" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" ></polyline></svg>
 
         },
         {
@@ -72,8 +72,36 @@ const SvgIcons = ({ name, width, color, height }: { name: string, color?: string
             icon: <svg xmlns="http://www.w3.org/2000/svg" width="26.003" height="22.572" viewBox="0 0 26.003 22.572"><path id="twitter_bird_social_media_trending" data-name="twitter bird social media trending" d="M28.77,8.11a.87.87,0,0,0-.23-.2A4.69,4.69,0,0,0,29,6.54a1,1,0,0,0-1.54-1,6.42,6.42,0,0,1-2.28.92,6.21,6.21,0,0,0-7.08-1A6.07,6.07,0,0,0,15,12.2a1.02,1.02,0,0,0,2-.4,4.08,4.08,0,0,1,2-4.52,4.24,4.24,0,0,1,5.12,1,1,1,0,0,0,.88.28h.25a1,1,0,0,0,.34,1.62,1,1,0,0,0-.36.88A13.07,13.07,0,0,1,20.34,22.3,12.75,12.75,0,0,1,7.69,24.61a9.06,9.06,0,0,0,4.54-2.18,1,1,0,0,0-.78-1.66,4,4,0,0,1-3-1.39,3.63,3.63,0,0,0,1-.35,1,1,0,0,0-.21-1.87,4.42,4.42,0,0,1-3-2.48c.24,0,.48.05.74.06A.975.975,0,0,0,7.67,13C6,11.48,5.59,9.85,5.83,8.7a13.88,13.88,0,0,0,7,4,1.018,1.018,0,0,0,.38-2A12.1,12.1,0,0,1,6.39,6.31a1,1,0,0,0-1.53-.05,5.34,5.34,0,0,0-.31,6H4.46a1,1,0,0,0-.52.81,5.84,5.84,0,0,0,1.95,4.47,1,1,0,0,0-.18,1,6.63,6.63,0,0,0,3.18,3.57A13.89,13.89,0,0,1,4,23a1,1,0,0,0-.5,1.86A16.84,16.84,0,0,0,12,27.35a15.16,15.16,0,0,0,9.6-3.57,15.12,15.12,0,0,0,5.69-12.42,4.62,4.62,0,0,0,1.62-2.25,1,1,0,0,0-.14-1Z" transform="translate(-3.01 -4.778)" fill="#707488"></path>    </svg>
         },
         {
+            name: 'linkedin',
+            icon: <svg
+                viewBox="0 0 1024 1024"
+                fill="#707488"
+                height="34px"
+                width="34px"
+            >
+                <path d="M847.7 112H176.3c-35.5 0-64.3 28.8-64.3 64.3v671.4c0 35.5 28.8 64.3 64.3 64.3h671.4c35.5 0 64.3-28.8 64.3-64.3V176.3c0-35.5-28.8-64.3-64.3-64.3zm0 736c-447.8-.1-671.7-.2-671.7-.3.1-447.8.2-671.7.3-671.7 447.8.1 671.7.2 671.7.3-.1 447.8-.2 671.7-.3 671.7zM230.6 411.9h118.7v381.8H230.6zm59.4-52.2c37.9 0 68.8-30.8 68.8-68.8a68.8 68.8 0 10-137.6 0c-.1 38 30.7 68.8 68.8 68.8zm252.3 245.1c0-49.8 9.5-98 71.2-98 60.8 0 61.7 56.9 61.7 101.2v185.7h118.6V584.3c0-102.8-22.2-181.9-142.3-181.9-57.7 0-96.4 31.7-112.3 61.7h-1.6v-52.2H423.7v381.8h118.6V604.8z" />
+            </svg>,
+        },
+        {
+            name: 'github',
+            icon: <svg
+                fill="none"
+                stroke="#707488"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                viewBox="0 0 24 24"
+                height="32px"
+                width="32px"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" />
+
+                <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
+            </svg>
+        },
+        {
             name: 'instagram',
-            icon: <svg id="Component_130_1" data-name="Component 130 – 1" xmlns="http://www.w3.org/2000/svg" width="24.555" height="24.663" viewBox="0 0 24.555 24.663"><path id="Path_14748" data-name="Path 14748" d="M20.45,13.32a1,1,0,0,0-.57,1.3,4,4,0,1,1-2.31-2.3,1,1,0,0,0,.71-1.87,5.99,5.99,0,1,0,3.47,3.44,1,1,0,0,0-1.3-.57Z" transform="translate(-3.73 -3.677)" fill="#707488"></path><circle id="Ellipse_253" data-name="Ellipse 253" cx="1" cy="1" r="1" transform="translate(18.27 4.323)" fill="#707488"></circle><path id="Path_14749" data-name="Path 14749" d="M28,9a5,5,0,0,0-4.9-5h0A77.111,77.111,0,0,0,9,4,5,5,0,0,0,4,8.921,91.91,91.91,0,0,0,4,23a5,5,0,0,0,4.9,5h0c2.36.22,4.73.34,7.1.34s4.71-.11,7.05-.34A5,5,0,0,0,28,23.08,87.089,87.089,0,0,0,28,9ZM26,23a3,3,0,0,1-3,3h-.1A71.73,71.73,0,0,1,9,26a3,3,0,0,1-3-3.08A92.4,92.4,0,0,1,6,9,3,3,0,0,1,9.09,6q3.44-.31,6.9-.32T23,6a3,3,0,0,1,3,3.08A85.13,85.13,0,0,1,26,23Z" transform="translate(-3.73 -3.677)" fill="#707488"></path>    </svg>
+            icon: <svg fill="#707488" width="24.555" height="24.663" viewBox="0 0 24.555 24.663"><path id="Path_14748" data-name="Path 14748" d="M20.45,13.32a1,1,0,0,0-.57,1.3,4,4,0,1,1-2.31-2.3,1,1,0,0,0,.71-1.87,5.99,5.99,0,1,0,3.47,3.44,1,1,0,0,0-1.3-.57Z" transform="translate(-3.73 -3.677)" fill="#707488"></path><circle id="Ellipse_253" data-name="Ellipse 253" cx="1" cy="1" r="1" transform="translate(18.27 4.323)" fill="#707488"></circle><path id="Path_14749" data-name="Path 14749" d="M28,9a5,5,0,0,0-4.9-5h0A77.111,77.111,0,0,0,9,4,5,5,0,0,0,4,8.921,91.91,91.91,0,0,0,4,23a5,5,0,0,0,4.9,5h0c2.36.22,4.73.34,7.1.34s4.71-.11,7.05-.34A5,5,0,0,0,28,23.08,87.089,87.089,0,0,0,28,9ZM26,23a3,3,0,0,1-3,3h-.1A71.73,71.73,0,0,1,9,26a3,3,0,0,1-3-3.08A92.4,92.4,0,0,1,6,9,3,3,0,0,1,9.09,6q3.44-.31,6.9-.32T23,6a3,3,0,0,1,3,3.08A85.13,85.13,0,0,1,26,23Z" transform="translate(-3.73 -3.677)" fill="#707488"></path>    </svg>
         },
         {
             name: 'facebook',
@@ -97,7 +125,7 @@ const SvgIcons = ({ name, width, color, height }: { name: string, color?: string
         },
         {
             name: 'favorite',
-            icon: <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bdbdc5" ><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path></svg>
+            icon: <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#bdbdc5" ><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path></svg>
         },
     ]
     const Icon: ReactNode = image.find((icon) => icon.name == name)?.icon

@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
+import moment from 'moment'
 
 const projectApi = [
     {
         id: 0,
         name: 'Deeptalk Chatbot',
         description: `🚀 DeepTalk is a cutting-edge full-stack app, merging Next.js, Tailwind CSS, NextAuth.js, Prisma, PostgreSQL, and Vercel's AI SDK. It provides secure, personalized experiences through an intelligent chatbot 🤖. DeepTalk epitomizes modern full-stack development, seamlessly integrating frontend and backend 🌐. Users enjoy a cohesive, feature-rich journey with effortless engagement 💡.`,
-        time: '',
+        time: '202402',
         inProgress: false,
         slug: 'https://github.com/Hbadr13/deeptalk-chatbot',
         skils: ['Full Stack', 'Nextjs', 'API', 'Docker', 'TypeScript', 'TailwindCSS', `Vercel's AI SDK`, 'NextAuth.js', 'Prisma', 'PostgreSQL']
@@ -16,34 +17,34 @@ const projectApi = [
         id: 0,
         name: 'Ft_Transcendence',
         description: `🌐 Developed a dynamic web platform with my skilled team, using Nest.js for the backend and Next.js for the frontend. We focused on exceptional performance, security 🔒, and user experience. Implemented password hashing and SQL injection protection. The platform features intuitive navigation, OAuth login for connecting with friends worldwide 🌍, and interactive chat with private messaging 💬. Also included a modern twist on the classic Pong game 🕹️, blending nostalgia with innovative design. `,
-        time: '',
+        time: '202311',
         inProgress: false,
         slug: 'https://github.com/Hbadr13/ft_transcendence',
         skils: ['Full Stack', 'Work with team', 'Nextjs', 'NestJs', 'PostgreSQL', 'Docker', 'TypeScript', 'TailwindCSS', 'Prisma']
     },
     {
         id: 0,
-        name: 'Python Modules',
-        description: `🔧 This Python module features hands-on exercises with NumPy and Pandas, designed to strengthen your data manipulation and analysis skills. It includes practical tasks for working with arrays, data frames, and performing complex computations. Additionally, the module covers other essential Python skills to enhance your proficiency in data science and programming. 📈💻`,
-        time: '',
-        inProgress: false,
-        slug: 'https://github.com/Hbadr13/IA-python',
-        skils: ['Python', 'Numpy', 'Pandas', 'Matplotlib']
-    },
-    {
-        id: 0,
         name: 'Inception',
         description: `🛠️ Implemented a small-scale infrastructure within a virtual machine using Docker Compose. Created custom Dockerfiles for each service, adhering to performance guidelines with the latest stable versions of Alpine or Debian. Configured NGINX with TLSv1.2/TLSv1.3 🔒, WordPress with php-fpm, and MariaDB in dedicated containers. Set up volumes for WordPress database and files 📂, and established a Docker network for seamless inter-container communication 🌐.`,
-        time: '',
+        time: '202307',
         inProgress: false,
         slug: 'https://github.com/Hbadr13/inception',
         skils: ['Docker', 'Docker Compose', 'Nginx', 'mariadb']
     },
     {
         id: 0,
+        name: 'Python Modules',
+        description: `🔧 This Python module features hands-on exercises with NumPy and Pandas, designed to strengthen your data manipulation and analysis skills. It includes practical tasks for working with arrays, data frames, and performing complex computations. Additionally, the module covers other essential Python skills to enhance your proficiency in data science and programming. 📈💻`,
+        time: '202206',
+        inProgress: false,
+        slug: 'https://github.com/Hbadr13/IA-python',
+        skils: ['Python', 'Numpy', 'Pandas', 'Matplotlib']
+    },
+    {
+        id: 0,
         name: 'Web server',
         description: `🌐 Developed a custom HTTP server in C++ using object-oriented programming principles, capable of handling HTTP requests 📨 and responses, allowing testing with real web browsers 🌍. The server also supports WebSocket communication for real-time interaction ⚡ between clients and the server.`,
-        time: 'March 2021',
+        time: '202301',
         inProgress: false,
         slug: 'https://github.com/Hbadr13/webserv',
         skils: ['C/C++', 'Work with team', 'Nginx', 'WebSocket', 'HTTP Req/Res']
@@ -52,7 +53,7 @@ const projectApi = [
         id: 0,
         name: 'Cub3d',
         description: `"🎮 Developed a dynamic 3D maze exploration project inspired by Wolfenstein 3D 🧱, utilizing ray-casting techniques and applying mathematics to create efficient algorithms, enhancing skills in graphic design, event handling, and algorithmic problem-solving. 🧩"`,
-        time: 'November 2021',
+        time: '202212',
         inProgress: false,
         slug: 'https://github.com/Hbadr13/cub3d',
         skils: ['C/C++', 'Work with team', 'Ray-Casting']
@@ -61,7 +62,7 @@ const projectApi = [
         id: 0,
         name: 'Minishell',
         description: `🛠️ Created a simple shell, deepening understanding of processes and file descriptors. This project provided hands-on experience with command-line interactions and the underlying mechanisms that shaped early computing interfaces. 💻`,
-        time: 'November 2021',
+        time: '202208',
         inProgress: false,
         slug: 'https://github.com/Hbadr13/minishell',
         skils: ['C/C++', 'Work with team', 'Bash']
@@ -75,7 +76,7 @@ const index = () => {
             <ul className='space-y-10 mt-20'>
                 {
                     projectApi.map((item, index) =>
-                        <li key={index} className="w-full flex    bg-pf-surface-4/80 hover:bg-pf-surface-4 duration-200 rounded-xl p-4">
+                        <li key={index} className="w-full flex    bg-pf-surface-4/60 hover:bg-pf-surface-4 duration-200 rounded-xl p-4">
                             <div className="space-y-5">
                                 <div className="">
                                     <div className="flex space-x-2 items-center group">
@@ -88,7 +89,7 @@ const index = () => {
                                                 </path>
                                             </svg>
                                         </Link>
-                                        <div className="">{item.time}</div>
+                                        <div className="">{moment(item.time, "YYYYMM").fromNow()}</div>
                                     </div>
                                 </div>
                                 <div className="">{item.description}</div>

@@ -23,7 +23,7 @@ const educationApi = [
         id: 1,
         school: {
             name: 'Faculté Polydisciplinaire de Khouribga',
-            image: '/images/FP-Khouribga.jpg',
+            image: '/images/FP-Khouribga.jpeg',
             country: 'Morroco',
             city: 'khouribga',
         },
@@ -32,6 +32,20 @@ const educationApi = [
         startTime: 'September 2019',
         endTime: 'July 2024',
         slug: 'http://www.fpk.ac.ma/'
+    },
+    {
+        id: 2,
+        school: {
+            name: 'Lycee ibn tofail Oued Zem',
+            image: '',
+            country: 'Morroco',
+            city: 'oued zem',
+        },
+        branch: 'Baccalaureate of physics sciences',
+        description: `The program of the physical sciences branch includes the following main subjects: Physics and Chemistry, Mathematics, Life and Earth Sciences, and others.`,
+        startTime: '2019',
+        endTime: '',
+        slug: '#'
     },
 ]
 
@@ -42,8 +56,12 @@ const index = () => {
                 {
                     educationApi.map((item, index) =>
                         <li key={index} className="w-full flex   hover:bg-pf-surface-2 rounded-xl p-4 space-x-4">
-                            <Image className=' w-12 h-12 rounded-md' src={item.school.image} height={2000} width={2000} alt={item.school.name} />
-                            <div className="space-y-5">
+                            {
+                                item.school.image ?
+                                    <Image className=' w-12 h-12 object-center object-cover rounded-md' src={item.school.image} height={2000} width={2000} alt={item.school.name} />
+                                    : <div className=' w-12 h-12 rounded-md bg-pfbrand-stroke flex justify-center items-center text-white font-semibold'>{item.school.name[0]}</div>
+                            }
+                            <div className="space-y-5 w-[calc(100%-50px)]">
                                 <div className="">
                                     <div className="flex space-x-2 items-center group">
                                         <Link target='_blank' href={item.slug} className="font-bold hover:underline-offset-4 decoration-pf-callout-bar-accent hover:underline  duration-300">{item.school.name}</Link>
@@ -53,7 +71,7 @@ const index = () => {
                                         <div className="w-1.5 h-1.5 rounded-full bg-pf-dim-grey" />
                                         <div className="text-xs flex space-x-1 items-center">
                                             <div className="">{item.startTime}</div>
-                                            <span className="">-</span>
+                                            {item.endTime && <span className="">-</span>}
                                             <span className="">{item.endTime}</span>
                                         </div>
                                     </div>

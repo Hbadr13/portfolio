@@ -16,11 +16,24 @@ const Index = () => {
   const feeds = [
     {
       id: 0,
-      like: 21,
-      time: '20 Jan 2023',
+      like: 16,
+      time: 'Jan 2023',
       name: 'Hello World!',
-      description: `This is my site where I try and post about what I'm up to and how to do things with code. You can follow along with RSS by hitting the "Follow" button up above. Or if you're only interested in stuff I wrote about, check out /writing.`,
-      url: '/images/screenshot3.png',
+      description: `I'm thrilled to announce the completion of the 2-year common core curriculum at 1337 coding school. Throughout this time, I worked on projects in Unix programming, graphics, DevOps, and web development, which sharpened both my technical and soft skills like collaboration, resilience, and rigor`,
+      url: '/images/common-core.jpeg',
+      type: 'image',
+      status: {
+        name: `Feelin rich`,
+        emoji: '🤖'
+      },
+    },
+    {
+      id: 0,
+      like: 31,
+      time: 'Nov 2021',
+      name: 'Hello World!',
+      description: `I've embarked on an exciting learning journey at 1337, a unique coding school that follows the innovative 42 Network model. The school's emphasis on peer-to-peer learning and project-based education offers a dynamic environment where collaboration and problem-solving are key. This hands-on approach pushes students to explore, innovate, and master coding skills without traditional lectures, fostering a deep understanding of software development.`,
+      url: '/images/cluster.jpg',
       type: 'image',
       status: {
         name: `Feelin rich`,
@@ -30,10 +43,10 @@ const Index = () => {
     {
       id: 0,
       like: 21,
-      time: '20 Jan 2023',
+      time: 'Sep 2019',
       name: 'Hello World!',
-      description: `This is my site where I try and post about what I'm up to and how to do things with code. You can follow along with RSS by hitting the "Follow" button up above. Or if you're only interested in stuff I wrote about, check out /writing.`,
-      url: '/images/screenshot3.png',
+      description: `I started my academic journey at Faculté Polydisciplinaire Khouribga in the field of 'Sciences Mathématiques Informatique et Applications.' During this time, I gained a solid foundation in key subjects such as algebra, analysis, and differential calculus, which sharpened my analytical thinking and problem-solving skills.`,
+      url: '/images/fpk-building.png',
       type: 'image',
 
     },
@@ -56,7 +69,7 @@ const Index = () => {
         <ul className='space-y-20'>
           {
             feeds.map((item, index) =>
-              <li key={index} className="w-full  flex  hover:bg-pf-surface-2 rounded-xl p-4 space-x-4">
+              <li key={index} className="w-full  flex  bg-pf-project-card-background hover:bg-pf-surface-2 rounded-xl p-4 space-x-4">
                 <Image className=' w-12 h-12 rounded-full' src={user.image} height={2000} width={2000} alt={user.name} />
                 <div className="space-y-5">
                   <div className="">

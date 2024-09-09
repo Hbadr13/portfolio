@@ -77,11 +77,22 @@ const Navbar = () => {
             <div className="px-12">
                 <div className="flex justify-end mt-4 w-full">
                     <div className="w-10 h-2" />
-                    <Link target='_blank' className='flex justify-between items-center space-x-1 px-6 py-2 bg-pfbrand-stroke rounded-3xl text-white font-semibold' href={'https://www.linkedin.com/in/hamza-badr-3b2726202/'}>
+                    <Link target='_blank' className='flex justify-between items-center hover:scale-105 duration-200 space-x-1 px-6 py-2 bg-pfbrand-stroke rounded-3xl text-white font-semibold' href={'https://www.linkedin.com/in/hamza-badr-3b2726202/'}>
                         <div className="">
                             Follow
                         </div>
-                        <div className="">iN</div>
+                        <div className="">
+                            <svg
+                                baseProfile="tiny"
+                                viewBox="0 0 24 24"
+                                fill="white"
+                                height="25px"
+                                width="25px"
+                            >
+                                <path d="M8 19H5V9h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165V19h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03V19z" />
+                                <path d="M8.05 6.5 A1.55 1.5 0 0 1 6.5 8 A1.55 1.5 0 0 1 4.95 6.5 A1.55 1.5 0 0 1 8.05 6.5 z" />
+                            </svg>
+                        </div>
                     </Link>
                 </div>
                 <div className="mt-6 space-y-4">
