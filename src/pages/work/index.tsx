@@ -22,7 +22,7 @@ export const workApi = [
             'NextJs', 'Tailwind', 'CSS', 'TypeScript'
         ],
         private: false,
-        slug: '/work/job/mobile-developer-2034283'
+        slug: '/work/job/full-stack-042024'
     },
     {
         id: 0,
@@ -42,7 +42,7 @@ export const workApi = [
             'NextJs', 'Tailwind', 'CSS', 'TypeScript'
         ],
         private: true,
-        slug: '/work/job/full-stack-23421143'
+        slug: '/work/job/mobile-developer-022024',
     },
 ]
 
