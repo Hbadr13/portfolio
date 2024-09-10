@@ -58,20 +58,19 @@ const Index = () => {
     }, 1700);
   }
   return (
-    <div className='mt-20'>
-      <div className="">{``}</div>
+    <div className='mt-10 md:mt-20'>
       {/* {
                 content && <div className="fixed  inset-0 z-50 ">
                     <div className="text-9xl  relative ">🤖</div>
                 </div>
             } */}
       <div className="">
-        <ul className='space-y-20'>
+        <ul className='space-y-10 md:space-y-20'>
           {
             feeds.map((item, index) =>
-              <li key={index} className="w-full  flex  bg-pf-project-card-background hover:bg-pf-surface-2 rounded-xl p-4 space-x-4">
+              <li key={index} className="w-full  flex  bg-pf-project-card-background hover:bg-pf-surface-2 rounded-xl p-2 md:p-4 space-x-2 md:space-x-4">
                 <Image className=' w-12 h-12 rounded-full' src={user.image} height={2000} width={2000} alt={user.name} />
-                <div className="space-y-5">
+                <div className="space-y-3 md:space-y-5">
                   <div className="">
                     <div className="flex items-start space-x-3">
                       <div className="flex space-x-2 items-center">

@@ -48,15 +48,14 @@ const workApi = [
 
 const index = () => {
     return (
-        <div>
-
-            <ul className='space-y-10 mt-20'>
+        <div className='mt-10 md:mt-20'>
+            <ul className='space-y-10 md:space-y-10 '>
                 {
                     workApi.map((item, index) =>
-                        <li key={index} className="rounded-xl  pl-12 cursor-pointer flex flex-col justify-end space-y-4 bg-pf-project-card-background w-full h-[380px]   hover:scale-[101.2%] hover:shadow-inner duration-300">
+                        <li key={index} className="rounded-xl  p-4 md:p-0 ml-0 md:pl-12 cursor-pointer flex flex-col justify-end space-y-4 bg-pf-project-card-background w-full h-[300px] md:h-[380px]   hover:scale-[101.2%] hover:shadow-inner duration-300">
                             <h1 className='text-3xl truncate font-bold  text-pf-black '>{item.name}</h1>
                             <div className="w-full  flex  ">
-                                <div className="w-[55%] py-3  flex flex-col justify-center space-y-5 group">
+                                <div className="w-full md:w-[55%] py-3  flex flex-col justify-center space-y-5 group">
                                     <div className="flex items-center space-x-2 text-pf-grey-text ">
                                         <Image className='w-9 h-9 rounded-md' src={item.company.image} width={1000} height={1000} alt={item.company.name} />
                                         <div className="uppercase text-sm font-bold text-gray-800">{item.company.name}</div>
@@ -84,7 +83,7 @@ const index = () => {
                                             </div>
                                     }
                                 </div>
-                                <div className="w-[45%] flex items-end">
+                                <div className=" hidden w-0 md:w-[45%] md:flex items-end">
                                     <Image alt='frame' className=' w  object-contain ' width={3000} height={3000} objectFit='cover' src='/images/61019f9f743b67201879170a_Project List Image Frame - SJ-p-500.png' />
                                 </div>
                             </div>
