@@ -11,7 +11,7 @@ const index = () => {
             `
 
     return (
-        <div>
+        <div className='mt-10 md:mt-20 px-2 md:px-5'>
             <div className="text-4xl font-bold">مرحبًا  👋</div>
             <div className="whitespace-pre-wrap">
                 {about}

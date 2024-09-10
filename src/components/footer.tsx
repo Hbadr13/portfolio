@@ -22,14 +22,14 @@ const Footer = () => {
         },
     ]
     return (
-        <div className='w-full flex flex-col  items-center   py-20 bg-pf-surface-3 relative mt-20'>
+        <div className='w-full flex flex-col  items-center   py-10  md:py-20 bg-pf-surface-3 relative mt-20'>
             <div className="w-16 h-10 absolute z-10 -top-10 right-0 bg-pf-surface-3">
                 <div className="w-full h-full rounded-br-[160%]  bg-pf-white-v0"></div>
             </div>
             <div className="w-16 h-10 absolute z-10 -top-10 left-0 bg-pf-surface-3">
                 <div className="w-full h-full rounded-bl-[160%]  bg-pf-white-v0"></div>
             </div>
-            <div className="">Copyright © 2021 Hamza Badr. All rights reserved.</div>
+            <div className="text-center">Copyright © 2021 Hamza Badr. All rights reserved.</div>
             <div className="flex space-x-5 items-center mt-6">
                 {
                     medias.map((item, index) =>

@@ -3,7 +3,7 @@ import React from 'react'
 import SvgIcons from '../../../utils/svgIcons'
 import Image from 'next/image'
 
-const workApi = [
+export const workApi = [
     {
         id: 0,
         name: 'Full stack developer',
@@ -22,7 +22,7 @@ const workApi = [
             'NextJs', 'Tailwind', 'CSS', 'TypeScript'
         ],
         private: false,
-        slug: 'https://www.alkora.app/'
+        slug: '/work/job/mobile-developer-2034283'
     },
     {
         id: 0,
@@ -42,7 +42,7 @@ const workApi = [
             'NextJs', 'Tailwind', 'CSS', 'TypeScript'
         ],
         private: true,
-        slug: '#'
+        slug: '/work/job/full-stack-23421143'
     },
 ]
 
@@ -70,18 +70,12 @@ const index = () => {
                                         </div>
                                     </div>
                                     <div className="text-lg   first-letter:capitalize">{item.desrciption}</div>
-                                    {
-
-                                        !item.private ? <Link target='_blank' href={item.slug} className='group/link rounded-xl   w-max  p-5 font-semibold text-lg text-pf-dim-grey bg-white flex items-center space-x-2'>
-                                            <div>Explore the Project</div>
-                                            <div className="group-hover/link:translate-x-1 duration-200">
-                                                <SvgIcons name='arrawV3' />
-                                            </div>
-                                        </Link> :
-                                            <div className="cursor-not-allowed  w-max rounded-xl p-5 font-semibold text-lg text-pf-dim-grey bg-white opacity-0 duration-200 group-hover:opacity-100  group-hover:translate-y-3 ">
-                                                {`Can't share the latest yet 🤭`}
-                                            </div>
-                                    }
+                                    <Link href={item.slug} className='group/link rounded-xl   w-max  p-5 font-semibold text-lg text-pf-dim-grey bg-white flex items-center space-x-2'>
+                                        <div>Explore the Project</div>
+                                        <div className="group-hover/link:translate-x-1 duration-200">
+                                            <SvgIcons name='arrawV3' />
+                                        </div>
+                                    </Link>
                                 </div>
                                 <div className=" hidden w-0 md:w-[45%] md:flex items-end">
                                     <Image alt='frame' className=' w  object-contain ' width={3000} height={3000} objectFit='cover' src='/images/61019f9f743b67201879170a_Project List Image Frame - SJ-p-500.png' />

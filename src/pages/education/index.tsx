@@ -15,7 +15,7 @@ const educationApi = [
         branch: 'Software engineer',
         description: `1337 is the first institution to provide free IT training in Morocco. Its educational approach is based on peer learning, a participatory method that allows students to unleash their creativity through project-based learning, preparing the future coders of tomorrow.
         1337 is the coding school par excellence, offering a full immersion in a universe where the future is already present.`,
-        startTime: 'November 2021',
+        startTime: 'Nov 2021',
         endTime: 'Present',
         slug: 'https://1337.ma/'
     },
@@ -29,7 +29,7 @@ const educationApi = [
         },
         branch: 'Sciences mathématiques informatique et applications',
         description: `The Faculté Polydisciplinaire de Khouribga (FPK), established in 2004 as part of Morocco's decentralization and regionalization policies, is a multidisciplinary university under Sultan Moulay Slimane University. FPK offers a variety of initial and continuing education programs across fundamental and professional disciplines to meet the needs of the region it serves.`,
-        startTime: 'September 2019',
+        startTime: 'Sept 2019',
         endTime: 'July 2024',
         slug: 'http://www.fpk.ac.ma/'
     },
@@ -51,25 +51,25 @@ const educationApi = [
 
 const index = () => {
     return (
-        <div>
-            <ul className='space-y-10 mt-20'>
+        <div className='mt-10 md:mt-20'>
+            <ul className='space-y-10 '>
                 {
                     educationApi.map((item, index) =>
-                        <li key={index} className="w-full flex   hover:bg-pf-surface-2 rounded-xl p-4 space-x-4">
+                        <li key={index} className="w-full flex   hover:bg-pf-surface-2 rounded-xl px-0 md:p-4 space-x-1.5  md:space-x-4">
                             {
                                 item.school.image ?
-                                    <Image className=' w-12 h-12 object-center object-cover rounded-md' src={item.school.image} height={2000} width={2000} alt={item.school.name} />
-                                    : <div className=' w-12 h-12 rounded-md bg-pfbrand-stroke flex justify-center items-center text-white font-semibold'>{item.school.name[0]}</div>
+                                    <Image className=' mt-1 w-8 h-8 md:w-12 md:h-12 object-center object-cover rounded-md' src={item.school.image} height={2000} width={2000} alt={item.school.name} />
+                                    : <div className='mt-1 w-8 h-8 md:w-12 md:h-12 rounded-md bg-pfbrand-stroke flex justify-center items-center text-white font-semibold'>{item.school.name[0]}</div>
                             }
                             <div className="space-y-5 w-[calc(100%-50px)]">
                                 <div className="">
-                                    <div className="flex space-x-2 items-center group">
-                                        <Link target='_blank' href={item.slug} className="font-bold hover:underline-offset-4 decoration-pf-callout-bar-accent hover:underline  duration-300">{item.school.name}</Link>
-                                        <div className="opacity-0 group-hover:opacity-100 duration-200">
+                                    <div className="flex flex-col md:flex-row space-x-2 items-start md:items-center group">
+                                        <Link target='_blank' href={item.slug} className="truncate font-bold hover:underline-offset-4 decoration-pf-callout-bar-accent hover:underline  duration-300">{item.school.name}</Link>
+                                        <div className="opacity-0 group-hover:opacity-100 duration-200 hidden md:block">
                                             <SvgIcons name='link' />
                                         </div>
-                                        <div className="w-1.5 h-1.5 rounded-full bg-pf-dim-grey" />
-                                        <div className="text-xs flex space-x-1 items-center">
+                                        <div className="hidden md:block w-0 h-0 md:w-1.5 md:h-1.5 rounded-full bg-pf-dim-grey" />
+                                        <div className="text-xs flex space-x-1 items-center truncate ">
                                             <div className="">{item.startTime}</div>
                                             {item.endTime && <span className="">-</span>}
                                             <span className="">{item.endTime}</span>
@@ -77,7 +77,7 @@ const index = () => {
                                     </div>
                                     <div className="text-pf-light-grey-text">{item.branch}</div>
                                 </div>
-                                <div className="">{item.description}</div>
+                                <div className="text-sm  md:text-lg">{item.description}</div>
                             </div>
                         </li>
                     )

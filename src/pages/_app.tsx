@@ -9,14 +9,16 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={` ${inter.className} w-full text-pf-black  bg-pf-white-v0 `}>
+    <div className={`  flex flex-col justify-between ${inter.className} w-full text-pf-black min-h-screen bg-pf-white-v0 `}>
       <div className="w-full  desktop:w-[880px]  mx-auto ">
         <Navbar />
         <div className="px-2 md:px-12">
           <Component {...pageProps} />
         </div>
       </div>
-      <Footer />
+      <div className=" relative   ">
+        <Footer />
+      </div>
     </div>
   )
 }
