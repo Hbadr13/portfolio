@@ -91,12 +91,12 @@ const index = () => {
                                                 </svg>
                                             </Link>
                                         </div>
-                                        <div className="text-xs md:text-sm">{moment(item.time, "YYYYMM").fromNow()}</div>
+                                        <div className="text-xs md:text-sm text-gray-600">{moment(item.time, "YYYYMM").fromNow()}</div>
                                     </div>
                                 </div>
                                 <div className="text-sm md:text-lg">{item.description}</div>
                                 <div className="w-full flex flex-wrap justify-end gap-1 md:gap-2 text-xs md:text-sm">
-                                    {item.skils.map((skil, index) => <div key={index} className='px-2 py-0.5 bg-blue-500 text-white rounded-lg '>{skil}</div>)}
+                                    {item.skils.map((skil, index) => <div key={index} className='px-2 py-0.5  text-gray-500 rounded-lg  border border-slate-300 bg-slate-200 border-1'>{skil}</div>)}
                                 </div>
                             </div>
                         </li>

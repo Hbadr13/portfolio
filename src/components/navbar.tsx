@@ -1,69 +1,86 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import SvgIcons from '../../utils/svgIcons'
 import { useRouter } from 'next/router'
+
+const navs = [
+    {
+        id: 0,
+        name: 'Feed',
+        slug: '/',
+    },
+    {
+        id: 1,
+        name: 'Work',
+        slug: '/work',
+    },
+    {
+        id: 2,
+        name: 'Project',
+        slug: '/project',
+    },
+    {
+        id: 3,
+        name: 'Education',
+        slug: '/education',
+    },
+    {
+        id: 3,
+        name: 'About',
+        slug: '/about',
+    },
+
+]
+const profileDetails = [
+    {
+        id: 0,
+        name: 'Available',
+        image: 'work',
+        type: '',
+        slug: '/available',
+    },
+    {
+        id: 1,
+        name: 'Links',
+        image: 'link',
+        type: '',
+        slug: '/links',
+    },
+    {
+        id: 2,
+        name: 'May 2001',
+        image: 'birthDay',
+        type: '',
+        slug: '/birthDay',
+    },
+    {
+        id: 3,
+        name: 'July 2023',
+        image: 'work',
+        type: '',
+        slug: '/',
+    },
+
+]
 const Navbar = () => {
+    const fullText = `Full-Stack Developer ✨ with extensive experience in developing sophisticated web applications and a deep background in AI. Skilled at integrating AI technologies to enhance functionality and drive innovation.`
+    const [displayedText, setDisplayedText] = useState('');
 
-    const navs = [
-        {
-            id: 0,
-            name: 'Feed',
-            slug: '/',
-        },
-        {
-            id: 1,
-            name: 'Work',
-            slug: '/work',
-        },
-        {
-            id: 2,
-            name: 'Project',
-            slug: '/project',
-        },
-        {
-            id: 3,
-            name: 'Education',
-            slug: '/education',
-        },
-        {
-            id: 3,
-            name: 'About',
-            slug: '/about',
-        },
+    useEffect(() => {
+        let currentIndex = 0;
 
-    ]
-    const profileDetails = [
-        {
-            id: 0,
-            name: 'Available',
-            image: 'work',
-            type: '',
-            slug: '/available',
-        },
-        {
-            id: 1,
-            name: 'Links',
-            image: 'link',
-            type: '',
-            slug: '/links',
-        },
-        {
-            id: 2,
-            name: 'May 2001',
-            image: 'birthDay',
-            type: '',
-            slug: '/birthDay',
-        },
-        {
-            id: 3,
-            name: 'Joined Jan 2023',
-            image: 'work',
-            type: '',
-            slug: '/',
-        },
+        const typewriterEffect = setInterval(() => {
+            if (currentIndex + 1 < fullText.length) {
+                setDisplayedText((prev) => prev + fullText[currentIndex]);
+                currentIndex++;
+            } else {
+                clearInterval(typewriterEffect);
+            }
+        }, 10);
 
-    ]
+        return () => clearInterval(typewriterEffect);
+    }, [fullText]);
 
     const route = useRouter()
     return (
@@ -105,8 +122,8 @@ const Navbar = () => {
                             <div className="w-[15px] h-[15px] bg-pfbrand-stroke absolute z-20 top-0.5 left-0.5 rounded-full"></div>
                         </div>
                     </div>
-                    <div className="text-pf-grey-text text-sm md:text-lg">
-                        Full-Stack Developer ✨ with extensive experience in developing sophisticated web applications and a deep background in AI. Skilled at integrating AI technologies to enhance functionality and drive innovation.
+                    <div className="text-pf-grey-text text-sm md:text-lg  min-h-24">
+                        {displayedText}
                     </div>
                     <ul className="flex items-center space-x-4">
                         {profileDetails.map((item, index) =>
@@ -118,7 +135,7 @@ const Navbar = () => {
                     </ul>
                     <ul className="flex items-center space-x-4">
                         {navs.map((nav, index) =>
-                            <li key={index} className="text-pf-light-grey-text font-semibold  hover:bg-pf-bg-grey rounded-md  duration-200 text-center  py-2 w-1/4 ">
+                            <li key={index} className={` hover:bg-gray-200 duration-100 text-pf-light-grey-text font-semibold   rounded-md  text-center  py-2 w-1/4 `}>
                                 <Link
                                     href={nav.slug}
                                     className={`${route.asPath == nav.slug ? 'border-pf-brand-fill border-b-2' : ''}  p-2`}

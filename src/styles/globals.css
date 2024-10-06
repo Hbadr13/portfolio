@@ -30,4 +30,5 @@
 
 .animate-emojiMoving {
     animation: bounce 2s;
+    background-color: rgba(255, 255, 255, 0);
 }

@@ -11,6 +11,7 @@ export const workApi = [
             name: 'ALKora',
             image: '/images/alkora-logo.png',
         },
+        image: '/images/workBack2.png',
         desrciption: 'Built high-quality web applications, focusing on clean code, efficient design, optimizing user experience and backend functionality',
         startTime: 'March 2024',
         endTime: 'Present',
@@ -31,6 +32,7 @@ export const workApi = [
             name: 'Moojbuzz',
             image: '/images/moojbuz.svg',
         },
+        image: '/images/workBack1.png',
         desrciption: 'Focused on end-to-end mobile development, creating frontend interfaces and backend systems for responsive, scalable apps.',
         startTime: 'March 2024',
         endTime: 'Present',
@@ -52,7 +54,7 @@ const index = () => {
             <ul className='space-y-10 md:space-y-10 '>
                 {
                     workApi.map((item, index) =>
-                        <li key={index} className="rounded-xl  p-4 md:p-0 ml-0 md:pl-12 cursor-pointer flex flex-col justify-end space-y-4 bg-pf-project-card-background w-full h-[300px] md:h-[380px]   hover:scale-[101.2%] hover:shadow-inner duration-300">
+                        <li key={index} className="rounded-xl overflow-hidden  p-4 md:p-0 ml-0 md:pl-12 cursor-pointer flex flex-col justify-end space-y-4 bg-pf-project-card-background w-full h-[300px] md:h-[380px]   hover:scale-[101.2%] hover:shadow-inner duration-300">
                             <h1 className='text-3xl truncate font-bold  text-pf-black '>{item.name}</h1>
                             <div className="w-full  flex  ">
                                 <div className="w-full md:w-[55%] py-3  flex flex-col justify-center space-y-5 group">
@@ -78,7 +80,7 @@ const index = () => {
                                     </Link>
                                 </div>
                                 <div className=" hidden w-0 md:w-[45%] md:flex items-end">
-                                    <Image alt='frame' className=' w  object-contain ' width={3000} height={3000} objectFit='cover' src='/images/61019f9f743b67201879170a_Project List Image Frame - SJ-p-500.png' />
+                                    <Image alt='frame' className=' translate-x-1 translate-y-2  object-contain drop-shadow-[-1px_-1px_10px_rgba(112,112,114,0.3)] ' width={3000} height={3000} objectFit='cover' src={item.image} />
                                 </div>
                             </div>
                         </li>
