@@ -17,13 +17,13 @@ const Index = () => {
     {
       id: 0,
       like: 16,
-      time: 'Jan 2023',
+      time: 'Jan 2024',
       name: 'Hello World!',
       description: `I'm thrilled to announce the completion of the 2-year common core curriculum at 1337 coding school. Throughout this time, I worked on projects in Unix programming, graphics, DevOps, and web development, which sharpened both my technical and soft skills like collaboration, resilience, and rigor`,
       url: '/images/common-core.jpeg',
       type: 'image',
       status: {
-        name: `Feelin rich`,
+        name: `Feeling rich`,
         emoji: '🤖'
       },
     },
@@ -36,7 +36,7 @@ const Index = () => {
       url: '/images/cluster.jpg',
       type: 'image',
       status: {
-        name: `Feelin rich`,
+        name: `Feeling rich`,
         emoji: '🤖'
       },
     },
@@ -59,11 +59,6 @@ const Index = () => {
   }
   return (
     <div className='mt-10 md:mt-20'>
-      {/* {
-                content && <div className="fixed  inset-0 z-50 ">
-                    <div className="text-9xl  relative ">🤖</div>
-                </div>
-            } */}
       <div className="">
         <ul className='space-y-10 md:space-y-20'>
           {

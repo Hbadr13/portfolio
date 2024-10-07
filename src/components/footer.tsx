@@ -24,7 +24,6 @@ const Footer = () => {
     return (
         <div className='w-full flex flex-col  items-center    bg-pf-surface-3 relative mt-20'>
             <div className="w-full h-10 md:h-16 rounded-b-full bg-pf-white-v0 mb-10  mt:pb-20"></div>
-            <div className="text-center">Copyright © 2021 Hamza Badr. All rights reserved.</div>
             <div className="flex space-x-5 items-center mt-6">
                 {
                     medias.map((item, index) =>
@@ -34,6 +33,7 @@ const Footer = () => {
                     )
                 }
             </div>
+            <div className="text-center pb-10 mt-2">Copyright © 2021 Hamza Badr. All rights reserved.</div>
         </div>
     )
 }
