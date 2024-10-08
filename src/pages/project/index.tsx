@@ -143,7 +143,7 @@ const index = () => {
 
             <ul className='space-y-10 mt-10 md:mt-20'>
                 {
-                    projectApi.map((item, index) => <WorkCard item={item} index={index} />)
+                    projectApi.map((item, index) => <WorkCard key={index} item={item} index={index} />)
                 }
             </ul>
         </div>

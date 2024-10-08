@@ -74,7 +74,6 @@ const index = () => {
                         const { ref, inView } = useInView({
                             threshold: 0.8,
                             triggerOnce: true,
-
                         });
                         return (
                             <li ref={ref} key={index} className="rounded-xl overflow-hidden  p-4 md:p-0 ml-0 md:pl-12 cursor-pointer flex flex-col justify-end space-y-4 bg-pf-project-card-background w-full h-[300px] md:h-[380px]   hover:scale-[101.2%] hover:shadow-inner duration-300">
