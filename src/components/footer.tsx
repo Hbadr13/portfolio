@@ -22,18 +22,20 @@ const Footer = () => {
         },
     ]
     return (
-        <div className='w-full flex flex-col  items-center    bg-pf-surface-3 relative mt-20'>
+        <div className='w-full    bg-pf-surface-3 relative mt-20 md:mt-52'>
             <div className="w-full h-10 md:h-16 rounded-b-full bg-pf-white-v0 mb-10  mt:pb-20"></div>
-            <div className="flex space-x-5 items-center mt-6">
-                {
-                    medias.map((item, index) =>
-                        <Link href={item.slug} target='_blank' key={index} className='w-12 h-12 duration-200  hover:bg-pf-surface-4 rounded-md flex justify-center items-center'>
-                            <SvgIcons name={item.image} />
-                        </Link>
-                    )
-                }
+            <div className="w-full flex flex-col  items-center py-16 space-y-10">
+                <div className="flex space-x-5 items-center mt-6">
+                    {
+                        medias.map((item, index) =>
+                            <Link href={item.slug} target='_blank' key={index} className='w-12 h-12 duration-200  hover:bg-pf-surface-4 rounded-md flex justify-center items-center'>
+                                <SvgIcons name={item.image} />
+                            </Link>
+                        )
+                    }
+                </div>
+                <div className="text-center pb-10 mt-2">Copyright © 2024 Hamza Badr. All rights reserved.</div>
             </div>
-            <div className="text-center pb-10 mt-2">Copyright © 2021 Hamza Badr. All rights reserved.</div>
         </div>
     )
 }

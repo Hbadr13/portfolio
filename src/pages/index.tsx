@@ -11,47 +11,47 @@ const user = {
   image: '/images/hbadr.jpeg'
 }
 
+const feeds = [
+  {
+    id: 0,
+    like: 16,
+    time: 'Jan 2024',
+    name: 'Hello World!',
+    description: `I'm thrilled to announce the completion of the 2-year common core curriculum at 1337 coding school. Throughout this time, I worked on projects in Unix programming, graphics, DevOps, and web development, which sharpened both my technical and soft skills like collaboration, resilience, and rigor`,
+    url: '/images/common-core.jpeg',
+    type: 'image',
+    status: {
+      name: `Feeling rich`,
+      emoji: '🤖'
+    },
+  },
+  {
+    id: 0,
+    like: 31,
+    time: 'Nov 2021',
+    name: 'Hello World!',
+    description: `I've embarked on an exciting learning journey at 1337, a unique coding school that follows the innovative 42 Network model. The school's emphasis on peer-to-peer learning and project-based education offers a dynamic environment where collaboration and problem-solving are key. This hands-on approach pushes students to explore, innovate, and master coding skills without traditional lectures, fostering a deep understanding of software development.`,
+    url: '/images/cluster.jpg',
+    type: 'image',
+    status: {
+      name: `Feeling rich`,
+      emoji: '🤖'
+    },
+  },
+  {
+    id: 0,
+    like: 21,
+    time: 'Sep 2019',
+    name: 'Hello World!',
+    description: `I started my academic journey at Faculté Polydisciplinaire Khouribga in the field of 'Sciences Mathématiques Informatique et Applications.' During this time, I gained a solid foundation in key subjects such as algebra, analysis, and differential calculus, which sharpened my analytical thinking and problem-solving skills.`,
+    url: '/images/fpk-building.png',
+    type: 'image',
+
+  },
+]
 const Index = () => {
   const [content, setContent] = useState('')
 
-  const feeds = [
-    {
-      id: 0,
-      like: 16,
-      time: 'Jan 2024',
-      name: 'Hello World!',
-      description: `I'm thrilled to announce the completion of the 2-year common core curriculum at 1337 coding school. Throughout this time, I worked on projects in Unix programming, graphics, DevOps, and web development, which sharpened both my technical and soft skills like collaboration, resilience, and rigor`,
-      url: '/images/common-core.jpeg',
-      type: 'image',
-      status: {
-        name: `Feeling rich`,
-        emoji: '🤖'
-      },
-    },
-    {
-      id: 0,
-      like: 31,
-      time: 'Nov 2021',
-      name: 'Hello World!',
-      description: `I've embarked on an exciting learning journey at 1337, a unique coding school that follows the innovative 42 Network model. The school's emphasis on peer-to-peer learning and project-based education offers a dynamic environment where collaboration and problem-solving are key. This hands-on approach pushes students to explore, innovate, and master coding skills without traditional lectures, fostering a deep understanding of software development.`,
-      url: '/images/cluster.jpg',
-      type: 'image',
-      status: {
-        name: `Feeling rich`,
-        emoji: '🤖'
-      },
-    },
-    {
-      id: 0,
-      like: 21,
-      time: 'Sep 2019',
-      name: 'Hello World!',
-      description: `I started my academic journey at Faculté Polydisciplinaire Khouribga in the field of 'Sciences Mathématiques Informatique et Applications.' During this time, I gained a solid foundation in key subjects such as algebra, analysis, and differential calculus, which sharpened my analytical thinking and problem-solving skills.`,
-      url: '/images/fpk-building.png',
-      type: 'image',
-
-    },
-  ]
   const handleClickStatus = (_content: string) => {
     setContent(_content)
     setTimeout(() => {
@@ -65,15 +65,18 @@ const Index = () => {
           {
             feeds.map((item, index) => {
               const { ref, inView } = useInView({
-                threshold: 1,
-                triggerOnce: false
+                threshold: 0.8,
+                triggerOnce: false,
+                fallbackInView: true
+                // rootMargin: '100px'
 
               });
+
               return (
                 <li ref={ref} key={index} className={` duration-700 ${inView ? 'opacity-100 scale-105' : 'opacity-30'} w-full  flex  bg-pf-project-card-background hover:bg-pf-surface-2 rounded-xl p-2 md:p-4 space-x-2 md:space-x-4`}>
                   <Image className=' w-12 h-12 rounded-full' src={user.image} height={2000} width={2000} alt={user.name} />
                   <div className="space-y-3 md:space-y-5">
-                    <div className="">
+                    <div className=" overflow-hidden">
                       <div className="flex items-start space-x-3">
                         <div className="flex space-x-2 items-center">
                           <div className="font-bold">{user.shortName}  ✨</div>
@@ -82,7 +85,9 @@ const Index = () => {
                         </div>
                       </div>
                       {
-                        item.status && <button onClick={() => handleClickStatus(item.status.emoji)} className="bg-pf-surface-4 rounded-full px-2 py-1 space-x-1 w-max">
+                        item.status &&
+                        <button onClick={() => handleClickStatus(item.status.emoji)}
+                          className={` duration-1000 ${inView ? 'translate-x-0 opacity-100 w-auto' : 'translate-y-32 opacity-65 w-0'} bg-pf-surface-4 rounded-full px-2 py-1 space-x-1 w-max`}>
                           <span className={`${content != '' ? 'animate-emojiMoving' : ''}`}>
                             {item.status.emoji}
                           </span>
