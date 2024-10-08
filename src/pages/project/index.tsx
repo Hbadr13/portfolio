@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
 import moment from 'moment'
 
@@ -82,15 +82,16 @@ interface IWorkCardProps {
 }
 
 const WorkCard = ({ item, index }: IWorkCardProps) => {
-    const { ref, inView } = useInView({  // Only trigger animation once
-        threshold: [0.25, 0.5, 0.75, 1],
+    const [visibleTechnologies, setVisibleTechnologies] = useState<Array<string>>([]);
+    const re = useRef(false)
+    const { ref, inView } = useInView({
+        threshold: 1,
         triggerOnce: false
 
     });
-    const [visibleTechnologies, setVisibleTechnologies] = useState<Array<string>>([]);
 
     useEffect(() => {
-        if (!inView)
+        if (!inView || re.current)
             return
         item.skils.forEach((tech, index) => {
             setTimeout(() => {
@@ -98,7 +99,7 @@ const WorkCard = ({ item, index }: IWorkCardProps) => {
             }, 300 * index);
 
         })
-        item.skils = []
+        re.current = true
     }, [inView])
 
     return (
