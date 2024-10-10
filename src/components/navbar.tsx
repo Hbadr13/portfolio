@@ -123,7 +123,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="text-pf-grey-text text-sm md:text-lg  min-h-24">
-                        {displayedText}
+                        {/* {displayedText} */}
                     </div>
                     <ul className="flex items-center space-x-4">
                         {profileDetails.map((item, index) =>
@@ -135,7 +135,9 @@ const Navbar = () => {
                     </ul>
                     <ul className="flex items-center space-x-4">
                         {navs.map((nav, index) =>
-                            <li key={index} className={` hover:bg-gray-200 duration-100 text-pf-light-grey-text font-semibold   rounded-md  text-center  py-2 w-1/4 `}>
+                            <li key={index}
+                                className={`relative before:content-[''] before:w-0 before:hover:w-[80%] before:left-1/2 before:-translate-x-1/2 before:duration-700 before:self-center before:rounded-xl before:h-0.5 before:bg-pf-brand-fill before:absolute before:bottom-0  before:z-0 z-10 duration-100 text-pf-light-grey-text font-semibold rounded-md text-center py-2 w-1/4`}
+                            >
                                 <Link
                                     href={nav.slug}
                                     className={`${route.asPath == nav.slug ? 'border-pf-brand-fill border-b-2' : ''}  p-2`}

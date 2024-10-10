@@ -49,7 +49,7 @@ export const workApi = [
     },
 ]
 
-const AnimatedText = ({ text }: { text: string }) => {
+export const AnimatedText = ({ text }: { text: string }) => {
     return (
         <div className="flex">
             {text.split('').map((letter, index) => (
@@ -78,8 +78,11 @@ const index = () => {
                         return (
                             <li ref={ref} key={index} className="rounded-xl overflow-hidden  p-4 md:p-0 ml-0 md:pl-12 cursor-pointer flex flex-col justify-end space-y-4 bg-pf-project-card-background w-full h-[300px] md:h-[380px]   hover:scale-[101.2%] hover:shadow-inner duration-300">
                                 <h1 className='text-3xl truncate font-bold  text-pf-black '>
-                                    <AnimatedText text={item.name} />
-                                    {/* {item.name} */}
+                                    {
+
+                                        inView && <AnimatedText text={item.name} />
+                                    }
+
                                 </h1>
                                 <div className="w-full  flex  ">
                                     <div className="w-full md:w-[55%] py-3  flex flex-col justify-center space-y-5 group overflow-hidden">
