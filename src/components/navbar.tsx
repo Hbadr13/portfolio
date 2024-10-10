@@ -123,7 +123,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="text-pf-grey-text text-sm md:text-lg  min-h-24">
-                        {/* {displayedText} */}
+                        {displayedText}
                     </div>
                     <ul className="flex items-center space-x-4">
                         {profileDetails.map((item, index) =>
