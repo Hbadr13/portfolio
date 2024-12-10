@@ -8,6 +8,12 @@ const SvgIcons = ({ name, width, color, height }: { name: string, color?: string
             icon: <svg width="16" height="16" viewBox="0 0 16 16" fill="#0bb32a"  > <path d="m10.5 13.01 1.5 1.5-2.5.5-.5-.5 1.5-1.5zM7.92 1v1l2 1h2l1 6 1.5 4.5-1 1-10-10L5.92 1h2zM8 10.51l1.5 1.5-2.5.5-.5-.5 1.5-1.5zm-2.5-2.5L7 9.51l-2.5.5-.5-.5 1.5-1.5zm5.93.19H9.08l1.41 1.41h1.18l-.24-1.41zM3 5.51l1.5 1.5-2.5.5-.5-.5L3 5.51zm7.91-.01H6.43l1.41 1.41h3.31l-.24-1.41z" fill="#0bb32a" fillRule="evenodd" > </path></svg >
         },
         {
+            name: 'Contact',
+            icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5E5E63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-user-pen"
+            ><path d="M11.5 15H7a4 4 0 0 0-4 4v2" /><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /><circle cx="10" cy="7" r="4" /></svg>
+
+        },
+        {
             name: 'clock',
             icon: <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"> <path data-name="Combined Shape" d="M2.2,12.8A7.5,7.5,0,1,1,12.8,2.2,7.5,7.5,0,1,1,2.2,12.8ZM1.364,7.5A6.136,6.136,0,1,0,7.5,1.364,6.143,6.143,0,0,0,1.364,7.5Zm7.7,2.528L7.018,7.982a.68.68,0,0,1-.2-.482V3.409a.682.682,0,1,1,1.364,0V7.218l1.846,1.846a.682.682,0,1,1-.964.964Z" fill="#707488"></path></svg>
         },

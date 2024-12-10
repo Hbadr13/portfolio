@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import SvgIcons from '../../utils/svgIcons'
 import { useRouter } from 'next/router'
+import { Contact, Contact2Icon, LinkedinIcon, LucideLinkedin } from 'lucide-react'
 
 const navs = [
     {
@@ -37,28 +38,28 @@ const profileDetails = [
         id: 0,
         name: 'Available',
         image: 'work',
-        type: '',
+        type: 'text',
         slug: '/available',
     },
     {
         id: 1,
         name: 'Links',
         image: 'link',
-        type: '',
+        type: 'button',
         slug: '/links',
     },
     {
         id: 2,
         name: 'May 2001',
         image: 'birthDay',
-        type: '',
+        type: 'text',
         slug: '/birthDay',
     },
     {
         id: 3,
-        name: 'July 2023',
+        name: 'Mar 2024',
         image: 'work',
-        type: '',
+        type: 'text',
         slug: '/',
     },
 
@@ -81,7 +82,12 @@ const Navbar = () => {
 
         return () => clearInterval(typewriterEffect);
     }, [fullText]);
-
+    const ScrollToEnd = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth' // Optional: Add smooth scrolling effect
+        });
+    }
     const route = useRouter()
     return (
         <main className='w-full bg-pf-g overflow-hidden'>
@@ -92,24 +98,19 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="px-2 md:px-12">
-                <div className="flex justify-end mt-4 w-full">
-                    <div className="w-10 h-2" />
+                <div className="flex justify-end mt-4 w-full space-x-2">
+
+                    <Link className='flex justify-between items-center hover:scale-105 duration-200 space-x-1 px-2 py-0.5 md:px-6 md:py-2 bg-white text-pfbrand-stroke border border-pfbrand-stroke rounded-3xl  font-semibold' href={'/contact'}>
+                        <div className="">
+                            Contact
+                        </div>
+                        <Contact2Icon />
+                    </Link>
                     <Link target='_blank' className='flex justify-between items-center hover:scale-105 duration-200 space-x-1 px-2 py-0.5 md:px-6 md:py-2 bg-pfbrand-stroke rounded-3xl text-white font-semibold' href={'https://www.linkedin.com/in/hamza-badr-3b2726202/'}>
                         <div className="">
                             Follow
                         </div>
-                        <div className="">
-                            <svg
-                                baseProfile="tiny"
-                                viewBox="0 0 24 24"
-                                fill="white"
-                                height="25px"
-                                width="25px"
-                            >
-                                <path d="M8 19H5V9h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165V19h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03V19z" />
-                                <path d="M8.05 6.5 A1.55 1.5 0 0 1 6.5 8 A1.55 1.5 0 0 1 4.95 6.5 A1.55 1.5 0 0 1 8.05 6.5 z" />
-                            </svg>
-                        </div>
+                        <LucideLinkedin />
                     </Link>
                 </div>
                 <div className="mt-2 md:mt-6 space-y-4">
@@ -123,14 +124,20 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="text-pf-grey-text text-sm md:text-lg  min-h-24">
-                        {displayedText}
+                        {/* {displayedText} */}
                     </div>
                     <ul className="flex items-center space-x-4">
                         {profileDetails.map((item, index) =>
-                            <li key={index} className="flex items-center space-x-0.5 md:space-x-1 truncate text-sm">
-                                <SvgIcons name={item.image} />
-                                <div className="text-pf-light-grey-text">{item.name}</div>
-                            </li>
+
+                            item.type == 'button' ?
+                                <button onClick={ScrollToEnd} key={index} className="  flex items-center space-x-0.5 md:space-x-1 truncate text-sm">
+                                    <SvgIcons name={item.image} />
+                                    <div className="text-pf-light-grey-text">{item.name}</div>
+                                </button> :
+                                <li key={index} className="flex items-center space-x-0.5 md:space-x-1 truncate text-sm">
+                                    <SvgIcons name={item.image} />
+                                    <div className="text-pf-light-grey-text">{item.name}</div>
+                                </li>
                         )}
                     </ul>
                     <ul className="flex items-center space-x-4">

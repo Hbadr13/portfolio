@@ -86,7 +86,7 @@ const WorkCard = ({ item, index }: IWorkCardProps) => {
     const re = useRef(false)
     const { ref, inView } = useInView({
         threshold: 1,
-        triggerOnce: false
+        triggerOnce: true
 
     });
 
