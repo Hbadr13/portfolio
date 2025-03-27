@@ -54,7 +54,7 @@ const educationApi = [
 const index = () => {
 
     return (
-        <div className='mt-10 md:mt-20'>
+        <div className=' mt-40 w-full max-w-5xl mx-auto'>
             <ul className='space-y-10 '>
                 {
                     educationApi.map((item, index) => {

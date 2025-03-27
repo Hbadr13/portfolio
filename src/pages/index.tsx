@@ -54,7 +54,7 @@ const Index = () => {
 
   return (
     <div className='mt-10 md:mt-20'>
-      <div className="">
+      <div className="w-full max-w-5xl mx-auto">
         <ul className='space-y-10 md:space-y-20'>
           {
             feeds.map((item, index) => <FeedsItemCard item={item} key={index} />
@@ -79,14 +79,14 @@ const FeedsItemCard = ({ item }: { item: typeof feeds[0] }) => {
   }
   const { ref, inView } = useInView({
     threshold: 0.8,
-    triggerOnce: false,
+    triggerOnce: true,
     fallbackInView: true
     // rootMargin: '100px'
 
   });
 
   return (
-    <li ref={ref} className={` duration-700 ${inView ? 'opacity-100 scale-105' : 'opacity-30'} w-full  flex  bg-pf-project-card-background hover:bg-pf-surface-2 rounded-xl p-2 md:p-4 space-x-2 md:space-x-4`}>
+    <li ref={ref} className={` duration-700 ${inView ? 'opacity-100 scale-[101%]' : 'opacity-90'} w-full  flex  bg-pf-project-card-background hover:bg-pf-surface-2 rounded-xl p-2 md:p-4 space-x-2 md:space-x-4`}>
       <Image className=' w-12 h-12 rounded-full' src={user.image} height={2000} width={2000} alt={user.name} />
       <div className="space-y-3 md:space-y-5">
         <div className=" overflow-hidden">

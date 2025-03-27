@@ -36,25 +36,25 @@ const Contact: React.FC = () => {
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setButtonText("Sending...");
+        // e.preventDefault();
+        // setButtonText("Sending...");
 
-        const serviceID = "service_mbenaoui5733";
-        const templateID = "template_mbenaoui5733";
-        const userID = "O1s7K5IOGCITNPAzv";
+        // const serviceID = "service_mbenaoui5733";
+        // const templateID = "template_mbenaoui5733";
+        // const userID = "O1s7K5IOGCITNPAzv";
 
-        emailjs
-            .send(serviceID, templateID, formDetails, userID)
-            .then(() => {
-                setButtonText("Send");
-                setFormDetails(formInitialDetails);
-                setStatus({ success: true, message: "Message sent successfully" });
-            })
-            .catch((error) => {
-                setButtonText("Send");
-                setStatus({ success: false, message: "Something went wrong, please try again later." });
-                console.error("Error:", error);
-            });
+        // emailjs
+        //     .send(serviceID, templateID, formDetails, userID)
+        //     .then(() => {
+        //         setButtonText("Send");
+        //         setFormDetails(formInitialDetails);
+        //         setStatus({ success: true, message: "Message sent successfully" });
+        //     })
+        //     .catch((error) => {
+        //         setButtonText("Send");
+        //         setStatus({ success: false, message: "Something went wrong, please try again later." });
+        //         console.error("Error:", error);
+        //     });
     };
 
     return (
