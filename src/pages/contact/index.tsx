@@ -6,6 +6,7 @@ import TrackVisibility from "react-on-screen";
 import emailjs from "emailjs-com";
 import Image from "next/image";
 import { textarea } from "framer-motion/client";
+import { SiGmail } from "react-icons/si";
 
 interface FormDetails {
     first_name: string;
@@ -56,7 +57,12 @@ const Contact: React.FC = () => {
         //         console.error("Error:", error);
         //     });
     };
-
+    return <div className="w-full mx-auto mt-40">
+        <div className="flex justify-center items-center mx-auto w-full space-x-4">
+            <SiGmail className='text-gray-600 w-7 h-7' />
+            <div className="text-lg ">hamzabadrbus@gmail.com</div>
+        </div>
+    </div>
     return (
         <section className=" min-h-screen bg-gradient-to-r from-white to-blue-100 pb-4 pt-40 px-5" id="connect">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">

@@ -1,10 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
+import { SiGmail } from 'react-icons/si'
 const Contact = () => {
     const listOfservice = [
         'full stack', 'prisma', 'fontend', 'data science',
         'full stack', 'prisma', 'fontend', 'data science'
     ]
+
     return (
         <main className='w-full'>
 
