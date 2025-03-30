@@ -171,7 +171,7 @@ const SofaProjectPage = () => {
       </section>
 
 
-      {project.slug == 'sofa' && <section className="mb-16">
+      {project.slug == 'sofa' && <section className="mb-16 mx-auto max-w-7xl w-full p-2">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center animate-fade-in">License</h2>
         <div className="bg-white p-8 rounded-xl shadow-lg animate-fade-in-up">
           <p className="text-lg text-gray-600">
