@@ -4,9 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { FiCheck, FiExternalLink } from "react-icons/fi";
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { SiGithub } from "react-icons/si";
-
+// project.slug != '/project/yalla-foot' && project.slug != '/project/github-admin' &&
 const SofaProjectPage = () => {
   const router = useRouter();
   const { slug } = router.query;
@@ -34,14 +33,14 @@ const SofaProjectPage = () => {
             <div className="space-y-3 ">
               <div className="flex items-center space-x-2">
                 <Image className='w-9 h-9' src={project.branding.logo} width={200} height={200} alt={project.title} />
-                <div className="text-6xl font-bold">{project.title}</div>
+                <div className=" text-3xl md:text-6xl font-bold">{project.title}</div>
               </div>
             </div>
-            <div className="font-semibold">{project.description.short}</div>
+            <div className="font-semibold text-xl md:text-2xl">{project.description.short}</div>
             <div className="pr-20">
-              <div className="h-4 w-full border-y"></div>
+              <div className="h-4 w-full border-y opacity-50"></div>
             </div>
-            <div className="">{project.description.full}</div>
+            <div className="text-lg md:text-xl">{project.description.full}</div>
             <div className="relative  py-2">
               <div
                 style={{
@@ -79,7 +78,19 @@ const SofaProjectPage = () => {
           </div>
         </div>
       </header>
-      <section className="py-16 bg-gray-50 px-10">
+      <section className="mb-12 p-6">
+        <div className="flex flex-wrap gap-2 mt-4">
+          {project.description.tags.map((tag, index) => (
+            <span key={index} className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-lg ">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </section>
+
+
+
+      <section className="py-16 bg-gray-50 px-1 md:px-10">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-12">
             Unlock the Power of Features
@@ -88,7 +99,7 @@ const SofaProjectPage = () => {
             {project.features.coreFunctionalities.map((feature, index) => (
               <div
                 key={index}
-                className="rounded-3xl border w-full p-6 transform transition-all h-auto"
+                className=" rounded-2xl md:rounded-3xl border w-full  p-2 md:p-6 transform transition-all h-auto"
               >
                 <div className="relative">
 
@@ -96,17 +107,19 @@ const SofaProjectPage = () => {
                     {feature.image ? <img
                       src={feature.image}
                       alt={feature.title}
-                      className="rounded-2xl"
+                      className="rounded-2xl min-h-80 object-cover"
                     /> :
-                      <div className="w-full h-80 rounded-xl border"></div>
+                      <div className="w-full bg-[#DBF0FF]/50 h-32 rounded-xl border"></div>
                     }
+
+                    <div className="h-10 md:h-0 w-full "></div>
                   </div>
 
                   <div className=" absolute inset-0 flex flex-col justify-end mt-4 text-start bg-gradient-to-b from-transparent to-white">
-                    <h3 className="text-2xl font-semibold text-gray-800">
+                    <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 text-lg">{feature.description}</p>
+                    <p className="text-gray-600 text-base  md:text-lg">{feature.description}</p>
                   </div>
                 </div>
               </div>
@@ -116,40 +129,42 @@ const SofaProjectPage = () => {
       </section>
 
 
-      <section className="mb-12">
-        <div className="flex flex-wrap gap-2 mt-4">
-          {project.description.tags.map((tag, index) => (
-            <span key={index} className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </section>
 
 
-      <section className="mb-12 max-w-5xl w-full mx-auto">
+
+      <section className="my-32 max-w-5xl w-full mx-auto p-2">
         <h2 className=" text-4xl md:text-6xl font-bold text-gray-900 py-4 mb-6 w-full text-center">Top Features & Benefits</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid justify-center  grid-cols-1 md:grid-cols-2 gap-4">
           {project.features.highlights.map((feature, index) => (
             <div key={index} className=" p-1  flex items-center space-x-4">
               <div className="rounded-full p-2 bg-[#565ADD]/10">
                 <FiCheck className="text-[#565ADD]" />
               </div>
-              <h3 className=" text-gray-900">{feature.text}</h3>
+              <h3 className=" text-gray-900 text-xl">{feature.text}</h3>
             </div>
           ))}
         </div>
       </section>
 
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Tech Stack</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="mb-12 max-w-screen-2xl mx-auto p-2">
+        <h2 className="text-center  text-5xl font-bold text-gray-900 py-14">Tech Stack</h2>
+        <div className=" flex flex-wrap justify-center gap-10">
           {project.techStack.map((tech, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-2xl text-orange-500 mb-4">{tech.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900">{tech.name}</h3>
-              <p className="text-gray-600">{tech.category}</p>
+            <div
+              key={index}
+              className={` w-full md:w-[420px] hover:scale-105 transition-all duration-300  hover:shadow-lg  group border flex ${index % 3 === 0
+                ? "bg-gradient-to-b from-[#E8F5F3]/80 to-[#E8F5F3]"
+                : index % 3 === 1
+                  ? "bg-gradient-to-b from-[#F8EDFB]/80 to-[#F8EDFB]"
+                  : "bg-gradient-to-b from-[#DBF0FF]/80 to-[#DBF0FF]"
+                } rounded-3xl py-14 px-7`}
+            >
+              <div className="w-full h-full flex flex-col items-center space-y-4">
+                <div className="text-5xl text-orange-500 mb-4">{tech.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900">{tech.name}</h3>
+                <p className="text-gray-600">{tech.shortDesc}</p>
+              </div>
             </div>
           ))}
         </div>

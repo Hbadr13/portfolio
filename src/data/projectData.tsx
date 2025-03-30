@@ -1,4 +1,4 @@
-import { FaFootballBall, FaChartLine, FaUsers, FaComments, FaTrophy, FaClock, FaMobileAlt, FaBolt, FaGlobe, FaSearch, FaListOl, FaBroadcastTower, FaSync, FaTruckMoving } from "react-icons/fa";
+import { FaFootballBall, FaChartLine, FaUsers, FaComments, FaTrophy, FaClock, FaMobileAlt, FaBolt, FaGlobe, FaSearch, FaListOl, FaBroadcastTower, FaSync, FaTruckMoving, FaReact, FaPalette, FaCode, FaCogs, FaCloud, FaMagic, FaMarkdown, FaNodeJs } from "react-icons/fa";
 import { FaGithub, FaCodeBranch, FaDesktop } from "react-icons/fa";
 import {
     FaShoppingCart, FaBoxOpen, FaShippingFast, FaCreditCard,
@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { FaFutbol, FaChartBar } from "react-icons/fa";
 import { FaDumbbell, FaHeartbeat, FaAppleAlt, FaFire, FaBookOpen, FaPlayCircle } from "react-icons/fa";
+import { SiAntdesign, SiApifox, SiAuth0, SiFramer, SiGit, SiImagedotsc, SiMarkdown, SiMongodb, SiNextdotjs, SiNodedotjs, SiRedux, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
 
 export const projectDetailsData = [
     {
@@ -74,12 +75,12 @@ export const projectDetailsData = [
             ],
         },
         techStack: [
-            { name: "Next.js", category: "Frontend", icon: <FaFootballBall /> },
-            { name: "Tailwind CSS", category: "Styling", icon: <FaMobileAlt /> },
-            { name: "TypeScript", category: "Programming Language", icon: <FaUsers /> },
-            { name: "Sofascore API", category: "Data Provider", icon: <FaGlobe /> },
-            { name: "Zustand", category: "State Management", icon: <FaChartLine /> },
-            { name: "Vercel", category: "Deployment", icon: <FaBolt /> },
+            { name: "Next.js", shortDesc: "React framework for SSR & SSG.", icon: <SiNextdotjs /> },
+            { name: "Tailwind CSS", shortDesc: "Utility-first CSS for styling.", icon: <SiTailwindcss /> },
+            { name: "TypeScript", shortDesc: "Strictly typed JavaScript.", icon: <SiTypescript /> },
+            { name: "Sofascore API", shortDesc: "Real-time sports data provider.", icon: <FaGlobe /> },
+            { name: "Vercel", shortDesc: "Frontend deployment platform.", icon: <SiVercel /> },
+            { name: "Git", shortDesc: "Version control system.", icon: <SiGit /> },
         ],
         license: {
             type: "Educational & Personal Use Only",
@@ -182,11 +183,16 @@ export const projectDetailsData = [
             description: "The Admin Panel allows store owners to manage products, orders, users, and track sales analytics in real time. Secure authentication ensures that only authorized users can access admin functionalities.",
         },
         techStack: [
-            { name: "Next.js", category: "Frontend", icon: <FaGlobe /> },
-            { name: "Tailwind CSS", category: "Styling", icon: <FaMobileAlt /> },
-            { name: "TypeScript", category: "Programming Language", icon: <FaUsers /> },
-            { name: "Zustand", category: "State Management", icon: <FaChartLine /> },
-            { name: "Vercel", category: "Deployment", icon: <FaBolt /> },
+            { name: "Next.js", shortDesc: "React framework for SSR & SSG.", icon: <SiNextdotjs /> },
+            { name: "Tailwind CSS", shortDesc: "Utility-first CSS for styling.", icon: <SiTailwindcss /> },
+            { name: "TypeScript", shortDesc: "Strictly typed JavaScript.", icon: <SiTypescript /> },
+            { name: "Redux", shortDesc: "Global state management.", icon: <SiRedux /> },
+            { name: "LocalStorage", shortDesc: "Session persistence.", icon: <FaDatabase /> },
+            { name: "Node.js", shortDesc: "JavaScript runtime for backend.", icon: <SiNodedotjs /> },
+            { name: "MongoDB", shortDesc: "NoSQL database for scalable data storage.", icon: <SiMongodb /> },
+            { name: "Cloudinary", shortDesc: "Media management & image optimization.", icon: <FaCloud /> },
+            { name: "Vercel", shortDesc: "Frontend deployment platform.", icon: <SiVercel /> },
+            { name: "Git", shortDesc: "Version control system.", icon: <FaCodeBranch /> },
         ],
         license: {
             type: "Educational & Personal Use Only",
@@ -227,39 +233,43 @@ export const projectDetailsData = [
                     title: "Comprehensive Workout Plans",
                     description: "Tailored workout programs for different fitness levels and goals.",
                     icon: <FaDumbbell />,
+                    image: '/feature/fitness/4.png'
+
                 },
                 {
                     title: "Nutrition & Diet Guidance",
                     description: "Personalized meal plans and expert nutrition advice.",
                     icon: <FaAppleAlt />,
-                    image: ''
+                    image: '/feature/fitness/1.png'
                 },
                 {
                     title: "Performance Analytics & Goals Tracking",
                     description: "Set goals and track your fitness journey with insightful data.",
                     icon: <FaChartLine />,
-                    image: ''
-                },
-                {
-                    title: "Fully Responsive UI with Tailwind CSS",
-                    description: "Enjoy a seamless experience on mobile, tablet, and desktop devices.",
-                    icon: <FaMobileAlt />,
-                    image: ''
+                    image: '/feature/fitness/3.png'
                 },
                 {
                     title: "Weight Loss & Muscle Gain Strategies",
                     description: "Effective methods for weight loss and muscle building.",
                     icon: <FaFire />,
-                    image: ''
+                    image: '/feature/fitness/2.png'
+                },
+                {
+                    title: "Fully Responsive UI with Tailwind CSS",
+                    description: "Enjoy a seamless experience on mobile, tablet, and desktop devices.",
+                    icon: <FaMobileAlt />,
+                    image: '/feature/fitness/5.png'
                 },
             ],
         },
         techStack: [
-            { name: "Next.js", category: "Frontend", icon: <FaBolt /> },
-            { name: "Tailwind CSS", category: "Styling", icon: <FaMobileAlt /> },
-            { name: "TypeScript", category: "Programming Language", icon: <FaUsers /> },
-            { name: "CMS (e.g., Contentful or Strapi)", category: "Content Management", icon: <FaBookOpen /> },
-            { name: "Vercel", category: "Deployment", icon: <FaBolt /> },
+            { name: "Next.js", shortDesc: "React-based framework for SSR & SSG.", icon: <SiNextdotjs /> },
+            { name: "Tailwind CSS", shortDesc: "Utility-first CSS for rapid UI styling.", icon: <SiTailwindcss /> },
+            { name: "TypeScript", shortDesc: "Typed JavaScript for robust applications.", icon: <SiTypescript /> },
+            { name: "Vercel", shortDesc: "Cloud platform for frontend deployment.", icon: <SiVercel /> },
+            { name: "Framer Motion", shortDesc: "Modern animation library for React.", icon: <SiFramer /> },
+            { name: "Git", shortDesc: "Version control system for collaboration.", icon: <SiGit /> },
+            { name: "Markdown", shortDesc: "Lightweight markup language for content formatting.", icon: <SiMarkdown /> },
         ],
         setup: {
             requirements: [
@@ -369,12 +379,11 @@ export const projectDetailsData = [
             ],
         },
         techStack: [
-            { name: "Next.js", category: "Frontend", icon: <FaFutbol /> },
-            { name: "Tailwind CSS", category: "Styling", icon: <FaMobileAlt /> },
-            { name: "TypeScript", category: "Programming Language", icon: <FaUsers /> },
-            { name: "Football Data API", category: "Data Provider", icon: <FaGlobe /> },
-            { name: "Zustand", category: "State Management", icon: <FaChartBar /> },
-            { name: "Vercel", category: "Deployment", icon: <FaBolt /> },
+            { name: "Next.js", shortDesc: "Frontend framework for SSR & SSG.", icon: <SiNextdotjs /> },
+            { name: "Tailwind CSS", shortDesc: "Utility-first CSS for styling.", icon: <SiTailwindcss /> },
+            { name: "TypeScript", shortDesc: "Strictly typed JavaScript.", icon: <SiTypescript /> },
+            { name: "Vercel", shortDesc: "Frontend deployment platform.", icon: <SiVercel /> },
+            { name: "Git", shortDesc: "Version control system.", icon: <SiGit /> },
         ],
         setup: {
             requirements: [
@@ -485,13 +494,13 @@ export const projectDetailsData = [
             ],
         },
         techStack: [
-            { name: "Next.js", category: "Frontend", icon: <FaGithub /> },
-            { name: "Tailwind CSS", category: "Styling", icon: <FaDesktop /> },
-            { name: "TypeScript", category: "Programming Language", icon: <FaUsers /> },
-            { name: "GitHub REST API", category: "Data Provider", icon: <FaDatabase /> },
-            { name: "Zustand", category: "State Management", icon: <FaChartLine /> },
-            { name: "Ant Design", category: "UI Components", icon: <FaClipboardList /> },
-            { name: "Vercel", category: "Deployment", icon: <FaBolt /> },
+            { name: "Next.js", shortDesc: "Frontend framework for SSR & SSG.", icon: <SiNextdotjs /> },
+            { name: "Tailwind CSS", shortDesc: "Utility-first CSS for styling.", icon: <SiTailwindcss /> },
+            { name: "TypeScript", shortDesc: "Strictly typed JavaScript.", icon: <SiTypescript /> },
+            { name: "GitHub REST API", shortDesc: "GitHub data provider for repositories and users.", icon: <SiGit /> },
+            { name: "Ant Design", shortDesc: "UI component library.", icon: <SiAntdesign /> },
+            { name: "Vercel", shortDesc: "Frontend deployment platform.", icon: <SiVercel /> },
+            { name: "NextAuth.js", shortDesc: "Authentication library for Next.js.", icon: <SiAuth0 /> },
         ],
         setup: {
             requirements: [

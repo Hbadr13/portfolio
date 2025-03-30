@@ -249,7 +249,7 @@ const index = () => {
                                                     <FiExternalLink />
                                                 </Link>
                                             </div>
-                                            {project.slug != '/project/yalla-foot' && project.slug != '/project/github-admin' && <div className="bg-gray-200/50 p-1 rounded-3xl">
+                                            {<div className="bg-gray-200/50 p-1 rounded-3xl">
 
                                                 <Link className="flex border hover:border-gray-400 items-center space-x-2 text-gray-950 bg-white rounded-3xl font-semibold w-max  px-2 md:px-3.5 py-1  md:py-2 active:opacity-60 duration-200" href={project.slug}>
                                                     <div className="text-sm md:text-base">
