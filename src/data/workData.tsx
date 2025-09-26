@@ -117,7 +117,6 @@ export const workData = [
             { icon: <SiPrisma className="text-5xl text-indigo-500" />, name: 'Prisma' },
             { icon: <SiAuth0 className="text-5xl text-gray-600" />, name: 'NextAuth.js' },
             { icon: <SiPostgresql className="text-5xl text-blue-900" />, name: 'PostgreSQL' },
-            { icon: <FaServer className="text-5xl text-purple-600" />, name: 'API Development' }
         ],
         description: {
             intro: "At Moojbuzz, I played a key role as a full-stack mobile developer, crafting high-performance mobile applications with a focus on user-centric design and reliable backend infrastructure. Leveraging React Native, NestJS, Docker, Git, and Firebase, I contributed to creating intuitive mobile experiences that were both secure and scalable.",
@@ -205,74 +204,74 @@ export const workData = [
         }
     },
     {
-    slug: "nexvoie-backend-developer",
-    title: "Backend Developer Internship at Nexvoie",
-    technologies: [
-        { icon: <FaJava className="text-5xl text-red-600" />, name: 'Java' },
-        { icon: <SiSpringboot className="text-5xl text-green-500" />, name: 'Spring Boot' },
-        { icon: <SiPostgresql className="text-5xl text-blue-900" />, name: 'PostgreSQL' },
-        { icon: <FaDocker className="text-5xl text-blue-700" />, name: 'Docker' },
-        { icon: <SiKeycloak className="text-5xl text-purple-600" />, name: 'Keycloak' },
-        { icon: <SiMinio className="text-5xl text-orange-500" />, name: 'MinIO' },
-        { icon: <SiElastic className="text-5xl text-orange-500" />, name: 'Elastic' },
-        { icon: <SiGitlab className="text-5xl text-orange-400" />, name: 'CI/CD' },
-        { icon: <SiNginx className="text-5xl text-green-700" />, name: 'NGINX' },
-        { icon: <SiGooglecloud className="text-5xl text-blue-500" />, name: 'GCP' },
-        { icon: <FaServer className="text-5xl text-purple-600" />, name: 'API Development' }
-    ],
-    startTime: 'Apr 2025',
-    endTime: 'Sep 2025',
-    country: 'Morocco',
-    city: 'Rabat',
-    location: 'Remote',
-    description: {
-        intro: "Completed an internship as Backend Developer at Nexvoie, designing, developing, and maintaining secure and scalable backend services. Focused on building robust APIs using Java, Spring Boot, and PostgreSQL, with tools like Docker, Keycloak, and NGINX.",
-        keyContributions: {
-            title: "Key Contributions & Technologies",
-            items: [
-                {
-                    label: "API Development",
-                    desc: "Built secure and scalable RESTful APIs with Java and Spring Boot for seamless integration with frontend applications.",
-                    icon: <FaServer className="text-purple-600 text-4xl" />
-                },
-                {
-                    label: "Database Management",
-                    desc: "Designed and optimized PostgreSQL databases ensuring efficient data storage and retrieval.",
-                    icon: <SiPostgresql className="text-blue-900 text-4xl" />
-                },
-                {
-                    label: "Containerization & Deployment",
-                    desc: "Implemented Docker for consistent environments and deployed services using GitLab CI/CD and GCP.",
-                    icon: <FaDocker className="text-blue-700 text-4xl" />
-                },
-                {
-                    label: "Authentication & Security",
-                    desc: "Managed authentication flows and system security using Keycloak and best practices.",
-                    icon: <SiKeycloak className="text-purple-600 text-4xl" />
-                }
-            ]
-        },
-        collaborationAndResults: {
-            title: "Collaboration and Results",
-            items: [
-                "Integrated backend services with frontend teams ensuring smooth data flow and optimal performance.",
-                "Participated in system integration, deployment, and cloud infrastructure projects on GCP.",
-                "Contributed to clean, maintainable codebases and effective team communication."
-            ]
-        },
-        softSkills: {
-            title: "Soft Skills Developed",
-            description: "Enhanced problem-solving, teamwork, and adaptability while managing complex backend systems.",
-            items: [
-                { label: "Problem-solving", desc: "Tackled complex backend challenges efficiently." },
-                { label: "Team collaboration", desc: "Worked closely with cross-functional teams for project success." },
-                { label: "Adaptability", desc: "Quickly adjusted to new frameworks and cloud services." },
-                { label: "Time management", desc: "Prioritized tasks to meet deadlines in a fast-paced environment." },
-                { label: "Attention to detail", desc: "Ensured reliable, secure, and maintainable code." }
-            ]
+        slug: "nexvoie-backend-developer",
+        title: "Backend Developer Internship at Nexvoie",
+        technologies: [
+            { icon: <FaJava className="text-5xl text-red-600" />, name: 'Java' },
+            { icon: <SiSpringboot className="text-5xl text-green-500" />, name: 'Spring Boot' },
+            { icon: <SiPostgresql className="text-5xl text-blue-900" />, name: 'PostgreSQL' },
+            { icon: <FaDocker className="text-5xl text-blue-700" />, name: 'Docker' },
+            { icon: <SiKeycloak className="text-5xl text-purple-600" />, name: 'Keycloak' },
+            { icon: <SiMinio className="text-5xl text-orange-500" />, name: 'MinIO' },
+            { icon: <SiElastic className="text-5xl text-orange-500" />, name: 'Elastic' },
+            { icon: <SiGitlab className="text-5xl text-orange-400" />, name: 'CI/CD' },
+            { icon: <SiNginx className="text-5xl text-green-700" />, name: 'NGINX' },
+            { icon: <SiGooglecloud className="text-5xl text-blue-500" />, name: 'GCP' },
+            { icon: <FaServer className="text-5xl text-purple-600" />, name: 'API Development' }
+        ],
+        startTime: 'Apr 2025',
+        endTime: 'Sep 2025',
+        country: 'Morocco',
+        city: 'Rabat',
+        location: 'Remote',
+        description: {
+            intro: "Completed an internship as Backend Developer at Nexvoie, designing, developing, and maintaining secure and scalable backend services. Focused on building robust APIs using Java, Spring Boot, and PostgreSQL, with tools like Docker, Keycloak, and NGINX.",
+            keyContributions: {
+                title: "Key Contributions & Technologies",
+                items: [
+                    {
+                        label: "API Development",
+                        desc: "Built secure and scalable RESTful APIs with Java and Spring Boot for seamless integration with frontend applications.",
+                        icon: <FaServer className="text-purple-600 text-4xl" />
+                    },
+                    {
+                        label: "Database Management",
+                        desc: "Designed and optimized PostgreSQL databases ensuring efficient data storage and retrieval.",
+                        icon: <SiPostgresql className="text-blue-900 text-4xl" />
+                    },
+                    {
+                        label: "Containerization & Deployment",
+                        desc: "Implemented Docker for consistent environments and deployed services using GitLab CI/CD and GCP.",
+                        icon: <FaDocker className="text-blue-700 text-4xl" />
+                    },
+                    {
+                        label: "Authentication & Security",
+                        desc: "Managed authentication flows and system security using Keycloak and best practices.",
+                        icon: <SiKeycloak className="text-purple-600 text-4xl" />
+                    }
+                ]
+            },
+            collaborationAndResults: {
+                title: "Collaboration and Results",
+                items: [
+                    "Integrated backend services with frontend teams ensuring smooth data flow and optimal performance.",
+                    "Participated in system integration, deployment, and cloud infrastructure projects on GCP.",
+                    "Contributed to clean, maintainable codebases and effective team communication."
+                ]
+            },
+            softSkills: {
+                title: "Soft Skills Developed",
+                description: "Enhanced problem-solving, teamwork, and adaptability while managing complex backend systems.",
+                items: [
+                    { label: "Problem-solving", desc: "Tackled complex backend challenges efficiently." },
+                    { label: "Team collaboration", desc: "Worked closely with cross-functional teams for project success." },
+                    { label: "Adaptability", desc: "Quickly adjusted to new frameworks and cloud services." },
+                    { label: "Time management", desc: "Prioritized tasks to meet deadlines in a fast-paced environment." },
+                    { label: "Attention to detail", desc: "Ensured reliable, secure, and maintainable code." }
+                ]
+            }
         }
     }
-}
 
 ];
 

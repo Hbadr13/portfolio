@@ -44,7 +44,7 @@ const SwipeComponent = ({ title, items }: { title: string, items: any[] }) => {
                 }}
             ></div>
 
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">{title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">{title}</h2>
             <div className="flex-1 flex  w-full space-x-[4%]">
                 <div className=" w-[8%] md:w-1/6 lg:w-1/5 flex rounded-r-[40px]  md:rounded-r-[80px] bg-gradient-to-r  from-0% via-40% to-100% from-white via-[#e9f5fe] to-[#e9f5fe]" />
                 <div className="py-12 md:py-20 lg:py-24 w-[84%] m  md:w-4/6 lg:w-3/5 bg-gradient-to-t from-[#eef0ff] to-[#eef0ff] rounded-[40px]  md:rounded-[80px]  overflow-hidden  flex items-center justify-center relative">
@@ -144,37 +144,39 @@ const WorkPage = () => {
                     backgroundSize: '40px 30px',
                 }}
             ></div>
-            <div className="bg-gradient-to-b from-gray-300 to-gray-100 p-[1px] max-w-6xl mx-auto bg-white rounded-[50px] overflow-hidden shadow-lg  mb-16 animate-fade-in-up">
-                <div className="bg-white p-3 rounded-[50px] overflow-hidden">
-                    <div className="bg-gradient-to-br from-gray-100 to-gray-300 p-[0.7px] rounded-[40px] overflow-hidden">
-                        <div className="bg-white rounded-[40px] p-4">
-                            <h2 className="text-3xl font-bold text-gray-900 mb-6 p-3">Technologies Used</h2>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                {workDescription.technologies.map((tech, index) => (
-                                    <div
-                                        key={index}
-                                        className=" cursor-pointer flex flex-col items-center space-y-2 p-6 bg-gray-50 rounded-lg hover:border transition-all duration-300 transform hover:-translate-y-1"
-                                    >
-                                        <div className="text-5xl mb-2 hover:scale-110 transition-transform duration-300">
-                                            {tech.icon}
+            <div className="p-2">
+                <div className="  bg-gradient-to-b from-gray-300 to-gray-100 p-[1px] max-w-6xl mx-auto bg-white rounded-[50px] overflow-hidden shadow-lg  mb-16 animate-fade-in-up">
+                    <div className="bg-white p-3 rounded-[50px] overflow-hidden">
+                        <div className="bg-gradient-to-br from-gray-100 to-gray-300 p-[0.7px] rounded-[40px] overflow-hidden">
+                            <div className="bg-white rounded-[40px] p-3 md:p-4">
+                                <h2 className=" text-3xl md:text-4xl font-bold text-gray-900 mb-6 p-3">Technologies Used</h2>
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                                    {workDescription.technologies.map((tech, index) => (
+                                        <div
+                                            key={index}
+                                            className=" cursor-pointer flex flex-col items-center space-y-2 p-3 md:p-6 bg-gray-50 rounded-lg hover:border transition-all duration-300 transform hover:-translate-y-1"
+                                        >
+                                            <div className="text-5xl mb-2 hover:scale-110 transition-transform duration-300">
+                                                {tech.icon}
+                                            </div>
+                                            <p className="text-lg font-semibold text-gray-700">{tech.name}</p>
                                         </div>
-                                        <p className="text-lg font-semibold text-gray-700">{tech.name}</p>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto rounded-xl p-8 mb-16 animate-fade-in-up">
-                <h2 className="text-4xl font-bold text-gray-900 py-10 text-center">{workDescription.description.keyContributions.title}</h2>
-                <div className="grid grid-cols-3 gap-8">
+            <div className="max-w-7xl mx-auto rounded-xl p-3 md:p-8 mb-16 animate-fade-in-up">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 py-10 text-center">{workDescription.description.keyContributions.title}</h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
                     {workDescription.description.keyContributions.items.map((item, index) => (
-                        <div key={index} className="w-full space-y-5 group">
+                        <div key={index} className="w-full space-y-5 group flex flex-col items-center">
                             <div className="p-2  bg-gray-200 group-hover:bg-gray-300 duration-200 rounded-md w-max">{item.icon}</div>
-                            <div className="text-gray-700">{item.label}</div>
-                            <div className="text-gray-700">{item.desc}</div>
+                            <div className="text-gray-900 font-semibold text-center">{item.label}</div>
+                            <div className="text-gray-700 text-center">{item.desc}</div>
                         </div>
                     ))}
                 </div>
@@ -201,7 +203,7 @@ const WorkPage = () => {
                                 <div className="w-full flex justify-center">
                                     <Image className='w-52 h-52' src={'/images/tree.png'} width={600} height={600} alt='tree' />
                                 </div>
-                                <h2 className="px-4 text-3xl md:text-4xl  font-bold text-gray-900 text-center py-2 md:py-5">{workDescription.description.softSkills.title}</h2>
+                                <h2 className="px-4 text-3xl md:text-4xl font-bold text-gray-900 text-center py-2 md:py-5">{workDescription.description.softSkills.title}</h2>
                                 <div className="  text-gray-600 text-center py-2 md:py-6 px-4 md:px-20 text-sm md:text-base">{workDescription.description.softSkills.description}</div>
                                 <ul className="gap-4 md:gap-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                                     {workDescription.description.softSkills.items.map((item, index) => (
