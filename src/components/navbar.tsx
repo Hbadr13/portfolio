@@ -23,7 +23,7 @@ const profileDetails = [
 const Navbar = () => {
     const router = useRouter();
     const isHomePage = router.pathname === '/';
-    const fullText = `Full-Stack Developer & Software Engineer, recently graduated with a Bachelor's degree in Artificial Intelligence. Skilled in building modern, scalable web applications and passionate about integrating AI solutions to create smarter, more impactful digital experiences.`
+    const fullText = `I am a Full-Stack Developer and Software Engineer with a Bachelor's degree in Artificial Intelligence. I build scalable and modern web applications, and I am passionate about applying AI to create smarter, more impactful digital solutions.`
     const [displayedText, setDisplayedText] = useState('');
 
     useEffect(() => {
