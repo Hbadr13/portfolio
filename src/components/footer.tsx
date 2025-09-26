@@ -52,7 +52,7 @@ const Footer = () => {
                     <SiGmail className='text-gray-600 w-7 h-7' />
                     <div className="text-lg ">hamzabadrbus@gmail.com</div>
                 </div>
-                <div className="text-center pb-10 mt-2">Copyright © 2024 Hamza Badr. All rights reserved.</div>
+                <div className="text-center pb-10 mt-2">Copyright © 2025 Hamza Badr. All rights reserved.</div>
             </div>
         </div>
     )

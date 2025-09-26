@@ -2,17 +2,30 @@ import { projectDetailsData } from "@/data/projectData";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FiCheck, FiExternalLink } from "react-icons/fi";
 import { SiGithub } from "react-icons/si";
 // project.slug != '/project/yalla-foot' && project.slug != '/project/github-admin' &&
 const SofaProjectPage = () => {
+  const [wait, setwait] = useState(true)
+  const [project, setproject] = useState<typeof projectDetailsData[0] | null>(null)
   const router = useRouter();
   const { slug } = router.query;
-  const project = projectDetailsData.find((it) => it.slug == slug)
 
+  useEffect(() => {
+    const pr = projectDetailsData.find((it) => it.slug == slug)
+    if (!pr) {
+      setwait(false)
+
+      return
+    }
+    setproject(pr)
+    setwait(false)
+
+  }, [slug])
+  if (wait && !project) return <div className="pt-44">loading... </div>
   if (!project)
-    return <div className="pt-44">not found {slug} </div>
+    return <div className="pt-44">not found : {slug} </div>
   return (
     <div className="pt-[72px] ">
       <header className="p-4" >
@@ -95,7 +108,7 @@ const SofaProjectPage = () => {
           <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-12">
             Unlock the Power of Features
           </h2>
-          <div className="columns-2xl space-y-5">
+          <div className="columns-lg space-y-5">
             {project.features.coreFunctionalities.map((feature, index) => (
               <div
                 key={index}
@@ -103,11 +116,11 @@ const SofaProjectPage = () => {
               >
                 <div className="relative">
 
-                  <div className="relative w-full ">
-                    {feature.image ? <img
+                  <div className="relative w-full">
+                    {feature.image ? <Image
                       src={feature.image}
                       alt={feature.title}
-                      className="rounded-2xl min-h-80 object-cover"
+                      className="rounded-2xl  min-h-80 object-cover"
                     /> :
                       <div className="w-full bg-[#DBF0FF]/50 h-32 rounded-xl border"></div>
                     }
@@ -115,7 +128,7 @@ const SofaProjectPage = () => {
                     <div className="h-10 md:h-0 w-full "></div>
                   </div>
 
-                  <div className=" absolute inset-0 flex flex-col justify-end mt-4 text-start bg-gradient-to-b from-transparent to-white">
+                  <div className=" absolute inset-0 flex flex-col justify-end mt-4 text-start bg-gradient-to-b from-transparent to-gray-100 rounded-xl">
                     <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
                       {feature.title}
                     </h3>

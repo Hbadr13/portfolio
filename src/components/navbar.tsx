@@ -17,13 +17,13 @@ const profileDetails = [
     { id: 0, name: 'Available', image: 'work', type: 'text', slug: '/available' },
     { id: 1, name: 'Links', image: 'link', type: 'button', slug: '/links' },
     { id: 2, name: 'May 2001', image: 'birthDay', type: 'text', slug: '/birthDay' },
-    { id: 3, name: 'Mar 2024', image: 'work', type: 'text', slug: '/' },
+    // { id: 3, name: 'Mar 2024', image: 'work', type: 'text', slug: '/' },
 ];
 
 const Navbar = () => {
     const router = useRouter();
     const isHomePage = router.pathname === '/';
-    const fullText = `Full-Stack Developer ✨ with extensive experience in developing sophisticated web applications and a deep background in AI. Skilled at integrating AI technologies to enhance functionality and drive innovation.`
+    const fullText = `Full-Stack Developer & Software Engineer, recently graduated with a Bachelor's degree in Artificial Intelligence. Skilled in building modern, scalable web applications and passionate about integrating AI solutions to create smarter, more impactful digital experiences.`
     const [displayedText, setDisplayedText] = useState('');
 
     useEffect(() => {

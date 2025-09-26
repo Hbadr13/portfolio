@@ -1,4 +1,4 @@
-import { FaFootballBall, FaChartLine, FaUsers, FaComments, FaTrophy, FaClock, FaMobileAlt, FaBolt, FaGlobe, FaSearch, FaListOl, FaBroadcastTower, FaSync, FaTruckMoving, FaReact, FaPalette, FaCode, FaCogs, FaCloud, FaMagic, FaMarkdown, FaNodeJs } from "react-icons/fa";
+import { FaFootballBall, FaChartLine, FaUsers, FaComments, FaTrophy, FaClock, FaMobileAlt, FaBolt, FaGlobe, FaSearch, FaListOl, FaBroadcastTower, FaSync, FaTruckMoving, FaReact, FaPalette, FaCode, FaCogs, FaCloud, FaMagic, FaMarkdown, FaNodeJs, FaServer } from "react-icons/fa";
 import { FaGithub, FaCodeBranch, FaDesktop } from "react-icons/fa";
 import {
     FaShoppingCart, FaBoxOpen, FaShippingFast, FaCreditCard,
@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import { FaFutbol, FaChartBar } from "react-icons/fa";
 import { FaDumbbell, FaHeartbeat, FaAppleAlt, FaFire, FaBookOpen, FaPlayCircle } from "react-icons/fa";
-import { SiAntdesign, SiApifox, SiAuth0, SiFramer, SiGit, SiImagedotsc, SiMarkdown, SiMongodb, SiNextdotjs, SiNodedotjs, SiRedux, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
+import { SiAntdesign, SiApifox, SiAuth0, SiFramer, SiGit, SiImagedotsc, SiMarkdown, SiMongodb, SiNextdotjs, SiNodedotjs, SiRedux, SiSupabase, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
 
 export const projectDetailsData = [
     {
@@ -87,6 +87,106 @@ export const projectDetailsData = [
             details: "This project is for **educational and personal use** and is **not affiliated** with Sofascore.",
         },
     },
+    {
+        "title": "Evol-N",
+        "slug": "evol-n",
+        "branding": {
+            "logo": "/logo/evol-n.png",
+            "image": "/projectsV1/evol-n.png",
+            "themeColor": "#1E90FF"
+        },
+        "links": {
+            "liveDemo": "https://evol-n.com/home",
+            "github": ""
+        },
+        "description": {
+            "short": "Evol-N is a full stack application with admin dashboard.",
+            "full": "Evol-N provides a comprehensive platform for managing users, content, and data efficiently. It features a robust backend with secure authentication, dynamic frontend interfaces, and integrated tools to facilitate workflow management and project tracking for businesses.",
+            "tags": ["Full Stack", "Admin Dashboard", "Web App", "Next.js", "Tailwind CSS", "Supabase", "TypeScript", "API"]
+        },
+        "features": {
+            "highlights": [
+                { "text": "User & Content Management", "icon": "<FaUsers />" },
+                { "text": "Admin Dashboard for Analytics", "icon": "<FaChartLine />" },
+                { "text": "Secure Authentication", "icon": "<FaUserShield />" },
+                { "text": "Responsive UI with Tailwind CSS", "icon": "<FaMobileAlt />" },
+                { "text": "API Integration & Full Stack Functionality", "icon": "<FaCogs />" },
+                { "text": "Real-Time Product Updates", "icon": "<FaSync />" },
+                { "text": "Advanced Search & Filtering", "icon": "<FaSearch />" },
+                { "text": "Order Tracking & Notifications", "icon": "<FaShippingFast />" },
+                { "text": "Multiple Payment Gateways", "icon": "<FaMoneyBillWave />" },
+                { "text": "User Reviews & Ratings", "icon": "<FaUsers />" },
+                { "text": "Data Security & Encryption", "icon": "<FaLock />" },
+                { "text": "Local Storage for Session Persistence", "icon": "<FaDatabase />" },
+                { "text": "Fast & Optimized Performance", "icon": "<FaBolt />" }
+
+            ],
+            "coreFunctionalities": [
+                {
+                    "title": "User & Content Management",
+                    "description": "Admins can manage users, content, and roles efficiently through the dashboard.",
+                    "icon": "<FaUsers />",
+                    "image": "/feature/evol-n/1.png"
+                },
+                {
+                    "title": "Admin Analytics Dashboard",
+                    "description": "Visualize data and track key metrics for informed decision making.",
+                    "icon": "<FaChartLine />",
+                    "image": "/feature/evol-n/2.png"
+                },
+                {
+                    "title": "Secure Authentication",
+                    "description": "Role-based access control ensures only authorized users can access sensitive data.",
+                    "icon": "<FaUserShield />",
+                    "image": "/feature/evol-n/3.png"
+                },
+                {
+                    "title": "Responsive UI",
+                    "description": "Seamless user experience on desktop, tablet, and mobile devices using Tailwind CSS.",
+                    "icon": "<FaMobileAlt />",
+                    "image": "/feature/evol-n/4.png"
+                },
+                {
+                    "title": "Full Stack Functionality",
+                    "description": "Backend API with Supabase and frontend integration for real-time data updates.",
+                    "icon": "<FaCogs />",
+                    "image": "/feature/evol-n/5.png"
+                },
+                {
+                    "title": "Model-Friendly Website Frontend",
+                    "description": "A responsive and intuitive frontend interface designed for a smooth shopping experience, showcasing products and interactive features effectively.",
+                    "icon": "<FaCogs />",
+                    "image": "/feature/evol-n/6.png"
+                }
+            ]
+        },
+        "adminPanel": {
+            "features": [
+                { "text": "User & Role Management", "icon": "<FaUsers />" },
+                { "text": "Content Management", "icon": "<FaFileAlt />" },
+                { "text": "Analytics Dashboard", "icon": "<FaChartLine />" },
+                { "text": "Secure Authentication", "icon": "<FaUserShield />" },
+                { "text": "API & Data Management", "icon": "<FaDatabase />" }
+            ],
+            "description": "The Admin Panel allows management of users, content, and analytics with secure authentication and real-time data updates."
+        },
+        "techStack": [
+            { "name": "Next.js", "shortDesc": "React framework for SSR & SSG.", "icon": <SiNextdotjs /> },
+            { "name": "Tailwind CSS", "shortDesc": "Utility-first CSS for styling.", "icon": <SiTailwindcss /> },
+            { "name": "TypeScript", "shortDesc": "Strictly typed JavaScript.", "icon": <SiTypescript /> },
+            { "name": "Supabase", "shortDesc": "Backend as a service and database.", "icon": <SiSupabase /> },
+            { "name": "Node.js", "shortDesc": "JavaScript runtime for backend.", "icon": <SiNodedotjs /> },
+            { "name": "LocalStorage", "shortDesc": "Session persistence and client-side storage.", "icon": <FaDatabase /> },
+            { "name": "JWT Authentication", "shortDesc": "Secure authentication with JSON Web Tokens.", "icon": <FaUserShield /> },
+            { "name": "Git", "shortDesc": "Version control system.", "icon": <FaCodeBranch /> },
+            { "name": "VPS Deployment", "shortDesc": "Hosting on Virtual Private Server for backend.", "icon": <FaServer /> }
+        ],
+        "license": {
+            "type": "Educational & Personal Use Only",
+            "details": "This project is for educational and personal use and is not affiliated with any commercial entity."
+        }
+    }
+    ,
     {
         title: "ShopSta",
         slug: "shopsta",
@@ -547,6 +647,17 @@ export const projectData = [
         "fullDescription": "It provides real-time live scores, in-depth match statistics, and comprehensive sports data powered by the Sofascore API. Built with Next.js and Tailwind CSS, the platform ensures a seamless, fully responsive experience across all devices."
     },
     {
+        "title": "Evol-N",
+        "slug": "/project/evol-n",
+        "logo": "/logo/evol-n.png",
+        "image": "/projectsV1/evol-n.png",
+        "liveDemo": "https://evol-n.com/home",
+        "github": "",
+        "shortDescription": "E-commerce App is a full-featured online store platform.",
+        "fullDescription": "This platform offers a complete e-commerce experience with an admin dashboard, product management, secure online payment, and responsive design. Customers can browse products, make purchases, and track orders seamlessly, while admins can manage inventory, monitor sales, and optimize user experience efficiently."
+
+    },
+    {
         "title": "ShopSta",
         "slug": "/project/shopsta",
         "logo": "/logo/shopSta.ico",
@@ -566,6 +677,7 @@ export const projectData = [
         "shortDescription": "Fitness Journey is a platform dedicated to fitness enthusiasts.",
         "fullDescription": "It covers the latest trends in fitness technology, workout routines, injury prevention, and nutrition tips. Whether you're looking for weight loss strategies, strength training guides, or lifestyle motivation, this platform offers a well-rounded experience tailored to every fitness level."
     },
+
     {
         "title": "YallaFoot",
         "slug": "/project/yalla-foot",

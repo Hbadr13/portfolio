@@ -7,6 +7,20 @@ import { useInView } from 'react-intersection-observer'
 
 const educationApi = [
     {
+        id: 1,
+        school: {
+            name: 'Faculté Polydisciplinaire de Khouribga',
+            image: '/images/FP-Khouribga.jpeg',
+            country: 'Morroco',
+            city: 'khouribga',
+        },
+        branch: 'Licence en Intelligence Artificielle',
+        description: `A Bachelor's program focused on Artificial Intelligence, combining both theoretical foundations and practical projects. The program covers key areas such as machine learning, deep learning, natural language processing, and data science, preparing graduates to apply AI techniques in solving real-world problems.`,
+        startTime: 'Sept 2024',
+        endTime: 'July 2025',
+        slug: 'http://www.fpk.ac.ma/'
+    },
+    {
         id: 0,
         school: {
             name: '1337 Coding School',

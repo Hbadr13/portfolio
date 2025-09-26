@@ -6,6 +6,35 @@ import { useInView } from 'react-intersection-observer'
 
 export const workApi = [
     {
+        id: 2,
+        name: 'Backend Developer',
+        company: {
+            name: 'Nexvoie',
+            image: '/images/nexvoie-logo.png',
+        },
+        image: '/images/workBack3.png',
+        desrciption: `Backend Developer at Nexvoie, designing and maintaining scalable APIs using Java, Spring Boot, and PostgreSQL. Experienced with Docker, Keycloak, NGINX, and CI/CD on Google Cloud Platform.`,
+        startTime: 'April 2025',
+        endTime: 'September 2025',
+        country: 'Morocco',
+        city: 'Rabat',
+        type: 'Internship',
+        location: 'remote',
+        skils: [
+            'Java',
+            'Spring Boot',
+            'PostgreSQL',
+            'Docker',
+            'Keycloak',
+            'MinIO',
+            'CI/CD',
+            'Nginx',
+            'Google Cloud Platform (GCP)',
+        ],
+        private: false,
+        slug: '/work/job/nexvoie-backend-developer',
+    },
+    {
         id: 0,
         name: 'Full stack developer',
         company: {
@@ -39,7 +68,7 @@ export const workApi = [
         endTime: 'December 2024',
         country: 'French',
         city: 'French',
-        type: 'StartUp',
+        type: 'Freelance',
         location: 'remote',
         skils: [
             'React Native', 'NestJs', 'Dockder', 'Git', 'Tailwind', 'CSS', 'TypeScript'

@@ -1,9 +1,10 @@
+import { Cloud } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
 
 import { FaReact, FaNodeJs, FaDocker, FaDatabase, FaPython, FaCogs } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiTypescript, SiPrisma, SiPostgresql, SiNginx, SiVercel, SiVite, SiJavascript, SiHtml5, SiNestjs, SiPocket, SiNativescript, SiExpo, SiFirebase } from 'react-icons/si';
+import { SiNextdotjs, SiTailwindcss, SiTypescript, SiPrisma, SiPostgresql, SiNginx, SiVercel, SiVite, SiJavascript, SiHtml5, SiNestjs, SiPocket, SiNativescript, SiExpo, SiFirebase, SiSpringboot, SiSupabase, SiNumpy, SiPandas, SiPlotly, SiScikitlearn, SiTensorflow, SiPytorch, SiSpacy, SiHuggingface } from 'react-icons/si';
 
 const TechStack = () => {
 
@@ -13,13 +14,10 @@ const TechStack = () => {
             skills: [
                 { name: 'React.js', icon: <FaReact /> },
                 { name: 'Next.js', icon: <SiNextdotjs /> },
-                { name: 'Vite.js', icon: <SiVite /> },
                 { name: 'TailwindCSS', icon: <SiTailwindcss /> },
-                { name: 'Firebase', icon: <SiFirebase /> },
                 { name: 'TypeScript', icon: <SiTypescript /> },
                 { name: 'JavaScript', icon: <SiJavascript /> },
                 { name: 'HTML/CSS', icon: <SiHtml5 /> },
-                { name: 'Vercel AI SDK', icon: <SiVercel /> },
                 { name: 'NextAuth.js', icon: <FaCogs /> },
             ],
         },
@@ -28,10 +26,12 @@ const TechStack = () => {
             skills: [
                 { name: 'Nest.js', icon: <SiNestjs /> },
                 { name: 'Node.js', icon: <FaNodeJs /> },
+                { name: 'Spring boot', icon: <SiSpringboot /> },
                 { name: 'MongoDB', icon: <FaDatabase /> },
+                { name: 'supabase', icon: <SiSupabase /> },
                 { name: 'PostgreSQL', icon: <SiPostgresql /> },
-                { name: 'API Development', icon: <FaCogs /> },
                 { name: 'Docker', icon: <FaDocker /> },
+                { name: 'GSP', icon: <Cloud /> },
                 { name: 'Prisma', icon: <SiPrisma /> },
             ],
         },
@@ -47,23 +47,20 @@ const TechStack = () => {
             ],
         },
         {
-            title: 'DevOps',
-            skills: [
-                { name: 'Docker', icon: <FaDocker /> },
-                { name: 'Docker Compose', icon: <FaDocker /> },
-                { name: 'Nginx', icon: <SiNginx /> },
-                { name: 'MariaDB', icon: <FaDatabase /> },
-            ],
-        },
-        {
-            title: 'Data Science & Analytics',
+            title: 'Artificial Intelligence & NLP',
             skills: [
                 { name: 'Python', icon: <FaPython /> },
-                { name: 'Numpy', icon: <FaPython /> },
-                { name: 'Pandas', icon: <FaPython /> },
-                { name: 'Matplotlib', icon: <FaPython /> },
+                { name: 'NumPy', icon: <SiNumpy /> },
+                { name: 'Pandas', icon: <SiPandas /> },
+                { name: 'Matplotlib', icon: <SiPlotly /> },
+                { name: 'Scikit-learn', icon: <SiScikitlearn /> },
+                { name: 'TensorFlow', icon: <SiTensorflow /> },
+                { name: 'PyTorch', icon: <SiPytorch /> },
+                { name: 'NLTK', icon: <SiNumpy /> },
+                { name: 'spaCy', icon: <SiSpacy /> },
             ],
         },
+
         {
             title: 'C/C++ Development',
             skills: [
@@ -108,11 +105,13 @@ const TechStack = () => {
 
 const index = () => {
     const about = `
-    I am Hamza Badr, a full-stack developer with extensive experience building scalable and high-performance web applications. Over the past few years, I have honed my skills in both frontend and backend development, primarily using Next.js, React.js, and Nest.js. With a strong understanding of modern web development practices and technologies, I am capable of delivering solutions that enhance user experience and optimize performance.
+    I am Hamza Badr, a full-stack developer with extensive experience building scalable and high-performance web applications. Over the past few years, I have honed my skills in both frontend and backend development, primarily using Next.js, React.js, Nest.js, Spring Boot, and Node.js. With a strong understanding of modern web development practices and technologies, I am capable of delivering solutions that enhance user experience and optimize performance.
 
-    My expertise includes designing and building RESTful APIs, working with databases (SQL/NoSQL), integrating third-party services, and creating responsive, user-friendly interfaces. I take pride in delivering clean, maintainable, and well-documented code.
+My expertise includes designing and building RESTful APIs, working with databases (PostgreSQL, MongoDB, Supabase), integrating third-party services, implementing secure authentication (JWT, Keycloak), and creating responsive, user-friendly interfaces with modern frameworks like Tailwind CSS and TypeScript. I also have experience with DevOps tools such as Docker, GitLab CI/CD, and deploying on cloud platforms (GCP, VPS).
 
-    Having worked on various complex projects, I’m adept at solving challenging problems, collaborating with multidisciplinary teams, and managing project timelines. I’m passionate about leveraging my technical skills to bring ideas to life and drive innovation in software development.
+I take pride in delivering clean, maintainable, and well-documented code. Having worked on various complex projects, I’m adept at solving challenging problems, collaborating with multidisciplinary teams, and managing project timelines.
+
+I graduated with a Bachelor${`'`}s degree in Artificial Intelligence, which has strengthened my expertise in AI & NLP, including conversational agents, chatbots, and intelligent automation. I’m passionate about leveraging my technical skills to bring ideas to life and drive innovation in software development.
     `;
 
     return (

@@ -121,7 +121,7 @@ const WorkCard = ({ item, index }: IWorkCardProps) => {
 
         })
         re.current = true
-    }, [inView])
+    }, [inView, item.skils])
 
     return (
         <li ref={ref} key={index}
@@ -161,8 +161,8 @@ const WorkCard = ({ item, index }: IWorkCardProps) => {
 
 const index = () => {
     return (
-        <div className='pt-20'>
-            <section className="relative   text-green-950 py-16">
+        <div className='pt-16'>
+            <section className="relative   text-green-950 p-16 ">
                 <div className="absolute inset-0 overflow-hidden">
                     <Image
                         src="/bg/7.png"
@@ -184,27 +184,30 @@ const index = () => {
                     <div className="overflow-hidden -translate-y-28">
                         <LineSVg />
                     </div>
-                    <div className="flex justify-center -translate-y-32">
+                    <div className="flex justify-center -translate-y-44">
                         <a
                             href="https://github.com/Hbadr13"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105"
+                            className=" flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-lg transition duration-300 transform hover:scale-105"
                         >
-                            Explore My Work
+                            <SiGithub width={24} height={24} />
+                            <div className="">
+                                Explore My Work
+                            </div>
                         </a>
                     </div>
                 </div>
             </section>
 
 
-            <div className="max-w-7xl mx-auto w-full    ">
-                <div className=" space-y-44 md:space-y-60  overflow-hidden  py-20 md:py-52  px-4">
+            <div className="max-w-7xl mx-auto w-full   -translate-y-60   ">
+                <div className=" space-y-24 md:space-y-44  overflow-hidden   py-4 md:py-52  px-4">
 
                     {
                         projectData.map((project, index) =>
                             <div key={index} className={` block md:flex space-y-12 md:space-y-0 ${index % 2 ? 'flex-row  space-x-0 md:space-x-10 lg:space-x-20' : 'flex-row-reverse space-x-reverse space-x-0  md:space-x-10 lg:space-x-20'}  w-full  `}>
-                                <div className={` px-4 w-full md:w-1/2 flex ${index % 2 ? 'justify-start' : 'justify-end'}`}>
+                                <div className={`  px-4 w-full md:w-1/2 flex ${index % 2 ? 'justify-start' : 'justify-end'}`}>
                                     <div className="relative z-10 spect-square  w-full max-w-[460px]">
                                         <Image className=' relative z-10' src={project.image} alt={project.title} width={1500} height={1500} />
                                         <Image className=' absolute z-0 scale-125  -top-10 md:-top-20  rotate-45  w-2/3 right-0 aspect-square' src={'/bg/8.png'} alt={project.title} width={1300} height={1200} />
@@ -214,12 +217,18 @@ const index = () => {
                                 <div className="w-full md:w-1/2 flex space-y-5  md:space-y-10 flex-col justify-center " >
                                     <div className="space-y-3 ">
                                         <div className="flex items-center space-x-2">
-                                            <Image className='w-9 h-9' src={project.logo} width={200} height={200} alt={project.title} />
-                                            <div className="text-3xl font-bold">{project.title}</div>
+                                            <Image loading='lazy' className='rounded-md w-9 h-9' src={project.logo} width={200} height={200} alt={project.title} />
+                                            {/* <div className="text-3xl font-bold">{project.title}</div> */}
+                                            <Link className="flex hover:underline hover:underline-offset-2 duration-200   items-center space-x-3 " href={project.slug}>
+                                                <div className="font-semibold">
+                                                    {project.title}
+                                                </div>
+                                                <HiOutlineArrowNarrowRight />
+                                            </Link>
                                         </div>
-                                        <Link target="_blank" href={project.github} className=" flex items-center space-x-2 text-white bg-gradient-to-br from-orange-300 to-violet-400 hover:to-violet-500 duration-200 transition-colors px-2 py-1 rounded-2xl w-max">
-                                            <SiGithub />
-                                            <div className="">Source code</div>
+                                        <Link target="_blank" href={project.github} className=" cursor-not-allowed flex items-center space-x-2 text-white bg-gradient-to-br from-orange-300 to-violet-400 hover:to-violet-500 duration-200 transition-colors px-2 py-1 rounded-2xl w-max">
+                                            {<SiGithub />}
+                                            <div className="">Private</div>
                                         </Link>
                                     </div>
                                     <div className="font-semibold">{project.shortDescription}</div>

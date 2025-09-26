@@ -13,7 +13,20 @@ const user = {
 
 const feeds = [
   {
-    id: 0,
+  id: 13,
+  like: 18,
+  time: 'july 2025',
+  name: 'Hello World!',
+  description: `I'm proud to have completed my Bachelor's degree in Artificial Intelligence and Information Systems at Faculté Polydisciplinaire Khouribga. During this year, I specialized in AI concepts such as machine learning, deep learning, and data analysis, while also strengthening my software engineering skills. Through different academic projects, I was able to apply theory into practice and reinforce my passion for technology and innovation.`,
+  url: '/images/licence-ai.jpg',
+  type: 'image',
+  status: {
+    name: `Feeling accomplished`,
+    emoji: '🎓'
+  },
+  },
+  {
+    id: 10,
     like: 16,
     time: 'Jan 2024',
     name: 'Hello World!',
@@ -26,7 +39,7 @@ const feeds = [
     },
   },
   {
-    id: 0,
+    id: 11,
     like: 31,
     time: 'Nov 2021',
     name: 'Hello World!',
@@ -39,7 +52,7 @@ const feeds = [
     },
   },
   {
-    id: 0,
+    id:12,
     like: 21,
     time: 'Sep 2019',
     name: 'Hello World!',
@@ -110,7 +123,7 @@ const FeedsItemCard = ({ item }: { item: typeof feeds[0] }) => {
             </button>
           }
         </div>
-        <div className="">{item.description}</div>
+        <div className=""><span></span>{item.description}</div>
         <div className="h[200px]">
           <Image className=' rounded-xl scale-90 shadow-inner w-fullh-full object-contain' src={item.url} height={4000} width={4000} alt={user.name} />
         </div>

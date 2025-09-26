@@ -11,23 +11,21 @@ const inter = Inter({
 export default function App({ Component, pageProps }: AppProps) {
   const pathname = usePathname()
   return (
-    pathname == '/contact' ?
-      <Component {...pageProps} />
-      :
-      <div className={`  flex flex-col justify-between ${inter.className} w-full text-pf-black min-h-screen bg-pf-white-v0 `}>
-        <div className="w-full">
-          <div className="w-full max-w-4xl mx-auto overflow-hidden">
 
-            <Navbar />
-          </div>
-          <div className="">
-            <Component {...pageProps} />
-          </div>
+    <div className={`  flex flex-col justify-between ${inter.className} w-full text-pf-black min-h-screen bg-pf-white-v0 `}>
+      <div className="w-full">
+        <div className="w-full max-w-4xl mx-auto overflow-hidden">
+
+          <Navbar />
         </div>
-        <div className=" relative   ">
-          <Footer />
+        <div className="">
+          <Component {...pageProps} />
         </div>
       </div>
+      <div className=" relative   ">
+        <Footer />
+      </div>
+    </div>
   )
 }
 {/* <div
