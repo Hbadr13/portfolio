@@ -2,8 +2,8 @@ import Link from 'next/link'
 import React from 'react'
 import SvgIcons from '../../../utils/svgIcons'
 import Image from 'next/image'
-import { AnimatedText } from '../work'
 import { useInView } from 'react-intersection-observer'
+import { AnimatedText } from '../experience'
 
 const educationApi = [
     {
@@ -69,7 +69,7 @@ const index = () => {
 
     return (
         <div className=' mt-40 w-full max-w-5xl mx-auto'>
-            <ul className='space-y-10 '>
+            <ul className='space-y-10 px-2'>
                 {
                     educationApi.map((item, index) => {
                         const { ref, inView } = useInView({
@@ -77,7 +77,7 @@ const index = () => {
                             triggerOnce: true,
                         });
                         return (
-                            <li ref={ref} key={index} className="w-full flex   hover:bg-pf-surface-2 rounded-xl px-0 md:p-4 space-x-1.5  md:space-x-4">
+                            <li ref={ref} key={index} className="w-full flex   hover:bg-pf-surface-2 rounded-xl px-0 md:p-4 space-x-2  md:space-x-4">
                                 <div className={` duration-700 ${inView ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}>
                                     {
                                         item.school.image ?
@@ -89,9 +89,14 @@ const index = () => {
                                     <div className="">
                                         <div className="flex flex-col md:flex-row space-x-2 items-start md:items-center group">
                                             <Link target='_blank' href={item.slug}
-                                                className=" relative text-xl truncate font-bold before:content-[''] before:w-[0%] before:hover:w-full before:h-1 before:z-0 before:absolute before:bg-transparent  before:hover:bg-pf-brand-fill/50 before:duration-700 before:rounded-full  z-10 before:bottom-0"
+                                                className="  hidden md:block whitespace-normal break-words relative text-xl font-bold before:content-[''] before:w-[0%] before:hover:w-full before:h-1 before:z-0 before:absolute before:bg-transparent  before:hover:bg-pf-brand-fill/50 before:duration-700 before:rounded-full  z-10 before:bottom-0"
                                             >
                                                 {inView && <AnimatedText text={item.school.name} />}
+                                            </Link>
+                                            <Link target='_blank' href={item.slug}
+                                                className=" block md:hidden whitespace-normal break-words relative text-xl font-bold before:content-[''] before:w-[0%] before:hover:w-full before:h-1 before:z-0 before:absolute before:bg-transparent  before:hover:bg-pf-brand-fill/50 before:duration-700 before:rounded-full  z-10 before:bottom-0"
+                                            >
+                                                {item.school.name}
                                             </Link>
                                             <div className="opacity-0 group-hover:opacity-100 duration-200 hidden md:block">
                                                 <SvgIcons name='link' />

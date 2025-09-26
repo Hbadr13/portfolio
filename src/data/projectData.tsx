@@ -638,7 +638,7 @@ export const projectDetailsData = [
 export const projectData = [
     {
         "title": "Sofa",
-        "slug": "/project/sofa",
+        "slug": "/projects/sofa",
         "logo": "/logo/sofa.ico",
         "image": "/projectsV1/sofa.png",
         "liveDemo": "https://sofa-nu.vercel.app/",
@@ -648,7 +648,7 @@ export const projectData = [
     },
     {
         "title": "Evol-N",
-        "slug": "/project/evol-n",
+        "slug": "/projects/evol-n",
         "logo": "/logo/evol-n.png",
         "image": "/projectsV1/evol-n.png",
         "liveDemo": "https://evol-n.com/home",
@@ -659,7 +659,7 @@ export const projectData = [
     },
     {
         "title": "ShopSta",
-        "slug": "/project/shopsta",
+        "slug": "/projects/shopsta",
         "logo": "/logo/shopSta.ico",
         "image": "/projectsV1/shopSta.png",
         "liveDemo": "https://shop-sta.vercel.app/",
@@ -669,7 +669,7 @@ export const projectData = [
     },
     {
         "title": "Fitness Journey",
-        "slug": "/project/fitness-journey",
+        "slug": "/projects/fitness-journey",
         "logo": "/logo/fitnessJ.ico",
         "image": "/projectsV1/fitnessJur.png",
         "liveDemo": "https://fitnesjourneyy.vercel.app/",
@@ -680,7 +680,7 @@ export const projectData = [
 
     {
         "title": "YallaFoot",
-        "slug": "/project/yalla-foot",
+        "slug": "/projects/yalla-foot",
         "logo": "/logo/yallaFoot.ico",
         "image": "/projectsV1/yalla.png",
         "liveDemo": "https://yalla-foot.vercel.app/",
@@ -690,7 +690,7 @@ export const projectData = [
     },
     {
         "title": "GitHub Admin Dashboard",
-        "slug": "/project/github-admin",
+        "slug": "/projects/github-admin",
         "logo": "/logo/github.ico",
         "image": "/projectsV1/github.png",
         "liveDemo": "https://github-admin-ivory.vercel.app/",

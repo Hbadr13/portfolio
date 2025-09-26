@@ -32,7 +32,7 @@ export const workApi = [
             'Google Cloud Platform (GCP)',
         ],
         private: false,
-        slug: '/work/job/nexvoie-backend-developer',
+        slug: '/experience/nexvoie-backend-developer',
     },
     {
         id: 0,
@@ -53,7 +53,7 @@ export const workApi = [
             'NextJs', 'Tailwind', 'CSS', 'TypeScript'
         ],
         private: false,
-        slug: '/work/job/aLKora-full-stack'
+        slug: '/experience/aLKora-full-stack'
     },
     {
         id: 0,
@@ -74,7 +74,7 @@ export const workApi = [
             'React Native', 'NestJs', 'Dockder', 'Git', 'Tailwind', 'CSS', 'TypeScript'
         ],
         private: true,
-        slug: '/work/job/moojbuzz-mobile-developer',
+        slug: '/experience/moojbuzz-mobile-developer',
     },
 ]
 

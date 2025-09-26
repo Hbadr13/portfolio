@@ -162,7 +162,7 @@ const WorkCard = ({ item, index }: IWorkCardProps) => {
 const index = () => {
     return (
         <div className='pt-16'>
-            <section className="relative   text-green-950 p-16 ">
+            <section className="relative   text-green-950 p-7 md:p-16 ">
                 <div className="absolute inset-0 overflow-hidden">
                     <Image
                         src="/bg/7.png"
@@ -173,8 +173,8 @@ const index = () => {
                         className="opacity-30"
                     />
                 </div>
-                <div className="relative container mx-auto px-6 text-center z-10">
-                    <h1 className="text-5xl font-extrabold tracking-tight mb-4 leading-tight">
+                <div className="relative container mx-auto px-2 md:px-6 text-center z-10">
+                    <h1 className=" text-2xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
                         My Featured Projects
                     </h1>
                     <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
@@ -201,14 +201,15 @@ const index = () => {
             </section>
 
 
-            <div className="max-w-7xl mx-auto w-full   -translate-y-60   ">
+            <div className="max-w-7xl mx-auto w-full   -translate-y-40   ">
                 <div className=" space-y-24 md:space-y-44  overflow-hidden   py-4 md:py-52  px-4">
 
                     {
                         projectData.map((project, index) =>
                             <div key={index} className={` block md:flex space-y-12 md:space-y-0 ${index % 2 ? 'flex-row  space-x-0 md:space-x-10 lg:space-x-20' : 'flex-row-reverse space-x-reverse space-x-0  md:space-x-10 lg:space-x-20'}  w-full  `}>
                                 <div className={`  px-4 w-full md:w-1/2 flex ${index % 2 ? 'justify-start' : 'justify-end'}`}>
-                                    <div className="relative z-10 spect-square  w-full max-w-[460px]">
+                                    <div className=" hidden md:block relative z-10 spect-square  w-full max-w-[460px]">
+
                                         <Image className=' relative z-10' src={project.image} alt={project.title} width={1500} height={1500} />
                                         <Image className=' absolute z-0 scale-125  -top-10 md:-top-20  rotate-45  w-2/3 right-0 aspect-square' src={'/bg/8.png'} alt={project.title} width={1300} height={1200} />
                                         <Image className=' absolute z-0 scale-150 left-10  top-[45%] rotate-45  w-2/3 right-0 aspect-square' src={'/bg/8.png'} alt={project.title} width={1300} height={1200} />
