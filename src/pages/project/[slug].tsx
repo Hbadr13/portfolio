@@ -118,6 +118,8 @@ const SofaProjectPage = () => {
 
                   <div className="relative w-full">
                     {feature.image ? <Image
+                      width={1000}
+                      height={1000}
                       src={feature.image}
                       alt={feature.title}
                       className="rounded-2xl  min-h-80 object-cover"
